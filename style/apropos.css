@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "regular";
+    src: url(../medias/fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: "bold";
+    src: url(../medias/fonts/Rubik-Bold.ttf);
+}
+
+@font-face {
+    font-family: "script";
+    src: url(../medias/fonts/Beauty\ and\ the\ Beast\ Sample.ttf);
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+* {
+    font-family: "regular";
+    color: rgb(24, 28, 54);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+/******************************HEADER*****************************/
+header {
+    background-color: whitesmoke;
+
+    position: fixed;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    top: 0;
+    padding: 1rem 0rem 1rem 0rem;
+
+    z-index: 10;
+}
+
+header>a>img {
+    margin-left: 4rem;
+    width: 4rem;
+}
+
+.onglets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 20%;
+    margin-right: 4rem;
+}
+
+.onglets>a {
+    font-size: 1rem;
+}
+
+
+/***************************CONTENU*******************************/
+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+}
+
+.qui{
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 15rem;
+}
+
+.qui>a>img{
+    width: 3.5rem;
+    opacity: 0.9;
+    margin-left: 2rem;
+}
+
+.qui>a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-family: "bold";
+}
+
+.qui>p{
+    font-family: "bold";
+}
+
+/******************************FOOTER*****************************/
+/*FOOTER*/
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 4rem 2rem 4rem;
+    padding-top: 2rem;
+
+    border-top: solid 0.1rem rgb(24, 28, 54);
+
+    z-index: 10;
+}
+
+footer>a>img{
+    width: 3rem;
+}

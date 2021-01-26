@@ -1,0 +1,322 @@
+@font-face {
+    font-family: "regular";
+    src: url(../medias/fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: "bold";
+    src: url(../medias/fonts/Rubik-Bold.ttf);
+}
+
+@font-face {
+    font-family: "script";
+    src: url(../medias/fonts/Beauty\ and\ the\ Beast\ Sample.ttf);
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+* {
+    font-family: "regular";
+    color: rgb(24, 28, 54);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+/******************************HEADER*****************************/
+header {
+    background-color: whitesmoke;
+
+    position: fixed;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    top: 0;
+    padding: 1rem 0rem 1rem 0rem;
+
+    z-index: 10;
+}
+
+header>a>img {
+    margin-left: 4rem;
+    width: 4rem;
+}
+
+.onglets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 45%;
+    margin-right: 4rem;
+}
+
+.onglets>a {
+    font-size: 1rem;
+}
+
+
+/******************************PESENTATION*****************************/
+.presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 12rem 0 0 0;
+}
+
+.presentation>img {
+    width: 10rem;
+}
+
+.presentation>p {
+    text-align: center;
+}
+
+.presentation>p:first-of-type {
+    font-family: "bold";
+    font-size: 2rem;
+
+    margin: 2rem 0 2rem 0;
+}
+
+.decouvrir {
+    width: 15%;
+    position: absolute;
+
+    top: 42rem;
+    left: 4rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.decouvrir>img {
+    width: 3rem;
+}
+
+/******************************MODELISATION*****************************/
+/*MODELISATION*/
+.modelisation3d{
+    position: absolute;
+    top: 52rem;
+    
+    width: 100%;
+    text-align: center;
+    font-family: "bold";
+}
+
+.contenus3d{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
+
+    margin-top: 25rem;
+}
+
+.contenus3d>a{
+    width: 25rem;
+    height: 15rem;
+    margin: 1rem;
+}
+
+.image1{
+    background-image: url(../medias/images/3D/delorean_insta_1.png);
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.image2{
+    background-image: url(../medias/images/3D/insta_delorean_b2f.png);
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.image3{
+    background-image: url(../medias/images/3D/super_charger_insta.png);
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+
+.image4{
+    background-image: url(../medias/images/3D/rendu_instagram.png);
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+/******************************Adobe*****************************/
+/*Adobe*/
+
+.adobe{
+    position: absolute;
+    top: 94rem;
+    
+    width: 100%;
+    text-align: center;
+    font-family: "bold";
+}
+
+.creation_adobe{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
+
+    margin-top: 8rem;
+}
+
+.creation_adobe>a{
+    width: 25rem;
+    height: 15rem;
+    margin: 1rem;
+}
+
+.image1_1{
+    background-image: url(../medias/images/illustrator/tqg.PNG);
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.image2_1{
+    background-image: url(../medias/images/illustrator/MockupOrigami.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.image3_1{
+    background-image: url(../medias/images/illustrator/MockupOwlcrea.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+
+.image4_1{
+    background-image: url(../medias/images/illustrator/Carte_Sombre.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.image5_1{
+    background-image: url(../medias/images/photoshop/info_duquoc_final.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.image6_1{
+    background-image: url(../medias/images/illustrator/dossier_client-08.png);
+    border: rgb(24, 28, 54) solid 0.08rem;
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+/******************************Audio*****************************/
+/*Audio*/
+
+.audio{
+    position: absolute;
+    top: 136rem;
+    
+    width: 100%;
+    text-align: center;
+    font-family: "bold";
+}
+
+.audiovisu1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 8rem 4rem 4rem 4rem;
+}
+.audiovisu2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 0 4rem  4rem;
+}
+
+.audiovisu>article{
+    width: 25rem;
+    height: 15rem;
+    margin: 1rem;
+}
+
+/******************************FOOTER*****************************/
+/*FOOTER*/
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 4rem 2rem 4rem;
+    padding-top: 2rem;
+
+    border-top: solid 0.1rem rgb(24, 28, 54);
+
+    z-index: 10;
+}
+
+footer>a>img{
+    width: 3rem;
+}
