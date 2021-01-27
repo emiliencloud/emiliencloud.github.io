@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: #e0e0e0;
 }
 
 * {
@@ -28,23 +28,41 @@ a {
 }
 
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
 /******************************HEADER*****************************/
-header {
-    background-color: whitesmoke;
+.blanc {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
-    position: fixed;
+    width: 100%;
+    height: 15%;
+    top: 0;
+
+    z-index: 9;
+}
+
+header {
+    background-color: #e0e0e0;
+    
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px #cccccc,
+        -10px -10px 20px #ffffff;
+
+    position: absolute;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    width: 100%;
-    top: 0;
+    width: 94%;
+    top: 1rem;
+    left: auto;
     padding: 1rem 0rem 1rem 0rem;
 
     z-index: 10;
@@ -61,7 +79,7 @@ header>a>img {
     justify-content: space-between;
     align-items: center;
 
-    width: 45%;
+    width: 46%;
     margin-right: 4rem;
 }
 
@@ -69,6 +87,9 @@ header>a>img {
     font-size: 1rem;
 }
 
+.onglets>a:hover {
+    text-decoration: underline;
+}
 
 /******************************PESENTATION*****************************/
 .presentation {
@@ -77,7 +98,7 @@ header>a>img {
     justify-content: space-between;
     align-items: center;
 
-    margin: 12rem 0 0 0;
+    margin: 14rem 0 0 0;
 }
 
 .presentation>img {
@@ -91,6 +112,10 @@ header>a>img {
 .presentation>p:first-of-type {
     font-family: "bold";
     font-size: 2rem;
+
+    background: -webkit-linear-gradient(left, #2362AE, #028DBB, #00ABBC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     margin: 2rem 0 2rem 0;
 }
@@ -114,16 +139,16 @@ header>a>img {
 
 /******************************MODELISATION*****************************/
 /*MODELISATION*/
-.modelisation3d{
+.modelisation3d {
     position: absolute;
     top: 52rem;
-    
+
     width: 100%;
     text-align: center;
     font-family: "bold";
 }
 
-.contenus3d{
+.contenus3d {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
     grid-template-rows: 1fr 1fr;
@@ -131,13 +156,46 @@ header>a>img {
     margin-top: 25rem;
 }
 
-.contenus3d>a{
+.contenus3d>a {
     width: 25rem;
     height: 15rem;
     margin: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+    color: white;
+    font-family: "bold";
+    font-size: 0;
+
+    border-radius: 10px;
 }
 
-.image1{
+.contenus3d>a:hover {
+    transition: 0.25s;
+
+    filter: grayscale(1);
+    box-shadow: 10px 10px 20px #ffffff,
+        -10px -10px 20px #ffffff;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-family: "bold";
+    font-size: 1.5rem;
+}
+
+.contenus3d>a:not(:hover) {
+    transition: 0.25s;
+}
+
+.image1 {
     background-image: url(../medias/images/3D/delorean_insta_1.png);
     background-size: cover;
     background-position: center;
@@ -147,7 +205,7 @@ header>a>img {
     grid-row-end: 2;
 }
 
-.image2{
+.image2 {
     background-image: url(../medias/images/3D/insta_delorean_b2f.png);
     background-size: cover;
     background-position: center;
@@ -157,7 +215,7 @@ header>a>img {
     grid-row-end: 2;
 }
 
-.image3{
+.image3 {
     background-image: url(../medias/images/3D/super_charger_insta.png);
     background-size: cover;
     background-position: center;
@@ -168,7 +226,7 @@ header>a>img {
 }
 
 
-.image4{
+.image4 {
     background-image: url(../medias/images/3D/rendu_instagram.png);
     background-size: cover;
     background-position: center;
@@ -181,16 +239,16 @@ header>a>img {
 /******************************Adobe*****************************/
 /*Adobe*/
 
-.adobe{
+.adobe {
     position: absolute;
     top: 94rem;
-    
+
     width: 100%;
     text-align: center;
     font-family: "bold";
 }
 
-.creation_adobe{
+.creation_adobe {
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
     grid-template-rows: 1fr 1fr;
@@ -198,13 +256,46 @@ header>a>img {
     margin-top: 8rem;
 }
 
-.creation_adobe>a{
+.creation_adobe>a {
     width: 25rem;
     height: 15rem;
     margin: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+    color: white;
+    font-family: "bold";
+    font-size: 0;
+
+    border-radius: 10px;
 }
 
-.image1_1{
+.creation_adobe>a:hover {
+    transition: 0.25s;
+
+    filter: grayscale(1);
+    box-shadow: 10px 10px 20px #ffffff,
+        -10px -10px 20px #ffffff;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-family: "bold";
+    font-size: 1.5rem;
+}
+
+.creation_adobe>a:not(:hover) {
+    transition: 0.25s;
+}
+
+.image1_1 {
     background-image: url(../medias/images/illustrator/tqg.PNG);
     background-size: cover;
     background-position: center;
@@ -214,7 +305,7 @@ header>a>img {
     grid-row-end: 2;
 }
 
-.image2_1{
+.image2_1 {
     background-image: url(../medias/images/illustrator/MockupOrigami.jpg);
     background-size: cover;
     background-position: center;
@@ -224,7 +315,7 @@ header>a>img {
     grid-row-end: 2;
 }
 
-.image3_1{
+.image3_1 {
     background-image: url(../medias/images/illustrator/MockupOwlcrea.jpg);
     background-size: cover;
     background-position: center;
@@ -235,7 +326,7 @@ header>a>img {
 }
 
 
-.image4_1{
+.image4_1 {
     background-image: url(../medias/images/illustrator/Carte_Sombre.jpg);
     background-size: cover;
     background-position: center;
@@ -245,7 +336,7 @@ header>a>img {
     grid-row-end: 3;
 }
 
-.image5_1{
+.image5_1 {
     background-image: url(../medias/images/photoshop/info_duquoc_final.jpg);
     background-size: cover;
     background-position: center;
@@ -255,7 +346,7 @@ header>a>img {
     grid-row-end: 3;
 }
 
-.image6_1{
+.image6_1 {
     background-image: url(../medias/images/illustrator/dossier_client-08.png);
     border: rgb(24, 28, 54) solid 0.08rem;
     background-size: cover;
@@ -269,16 +360,16 @@ header>a>img {
 /******************************Audio*****************************/
 /*Audio*/
 
-.audio{
+.audio {
     position: absolute;
     top: 136rem;
-    
+
     width: 100%;
     text-align: center;
     font-family: "bold";
 }
 
-.audiovisu1{
+.audiovisu1 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -286,37 +377,69 @@ header>a>img {
 
     margin: 8rem 4rem 4rem 4rem;
 }
-.audiovisu2{
+
+.audiovisu2 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 
-    margin: 0 4rem  4rem;
+    margin: 0 4rem 4rem;
 }
 
-.audiovisu>article{
+.audiovisu>article {
     width: 25rem;
     height: 15rem;
     margin: 1rem;
 }
 
+iframe{
+    border-radius: 10px;
+
+}
+
 /******************************FOOTER*****************************/
 /*FOOTER*/
-footer{
+.blanc2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 100%;
+    height: 15%;
+
+    z-index: 9;
+}
+
+footer {
+    background-color: #e0e0e0;
+    ;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px #cccccc,
+        -10px -10px 20px #ffffff;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    margin: 0 4rem 2rem 4rem;
-    padding-top: 2rem;
-
-    border-top: solid 0.1rem rgb(24, 28, 54);
+    width: 94%;
+    height: 4rem;
+    margin-bottom: 3rem;
+    padding: 1rem 0rem 1rem 0rem;
 
     z-index: 10;
 }
 
-footer>a>img{
+footer>a>img {
     width: 3rem;
+    margin-right: 4rem;
+}
+
+footer>p:nth-of-type(2){
+    padding-right: 10rem;
+}
+
+footer>p:nth-of-type(1){
+    margin-left: 4rem;
 }
