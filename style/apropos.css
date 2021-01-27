@@ -1,126 +1,53 @@
-@font-face {
-    font-family: "regular";
-    src: url(../medias/fonts/Rubik-Regular.ttf);
-}
+<!DOCTYPE html>
+<html lang="fr">
 
-@font-face {
-    font-family: "bold";
-    src: url(../medias/fonts/Rubik-Bold.ttf);
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/apropos.css">
+    <title>Emilien COULAND</title>
+</head>
 
-@font-face {
-    font-family: "script";
-    src: url(../medias/fonts/Beauty\ and\ the\ Beast\ Sample.ttf);
-}
+<body>
+    <div class="blanc">
+        <header id="header">
+            <a href="../index.html"><img src="../medias/logo/LogoCouleur.png" alt=""></a>
+            <section class="onglets">
+                <a href="../index.html">Home</a>
+                <a href="redaction.html">Rédaction</a>
+                <a href="apropos.html">À propos</a>
+            </section>
+        </header>
+    </div>
 
-body {
-    background-color: whitesmoke;
-}
+    <div class="moi">
+        <section class="qui">
+            Fan de design en tout genre, je m'intéresse beaucoup à la 3D et au monde du tatouage.
+            <br>
+            <br>
+            Actuellement à la recherche d'un stage du 5 Avril au 18 Juin 2020,
+            <br>
+            dans la communication, le dev web ou encore le graphisme.
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="https://www.instagram.com/emiliencloud/">Pour plus des créations plus personnelles<img
+                    src="../medias/logo/logo-instagram-noir.png" alt=""></a>
+            <br>
+            <p>e-mail : emiliencloud@gmail.com</p>
+        </section>
 
-* {
-    font-family: "regular";
-    color: rgb(24, 28, 54);
-    margin: 0;
-}
+        <iframe src="../medias/cv_emilien_couland.pdf" width="600" height="800"></iframe>
+    </div>
 
-a {
-    text-decoration: none;
-}
+    <div class="blanc2">
+        <footer>
+            <p>© 2021 - Emilien COULAND</p>
+            <p>emiliencloud@gmail.com</p>
+            <a href="#header"><img src="../medias/logo/fleche_haut.png" alt=""></a>
+        </footer>
+    </div>
+</body>
 
-
-html{
-    scroll-behavior: smooth;
-}
-
-/******************************HEADER*****************************/
-header {
-    background-color: whitesmoke;
-
-    position: fixed;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-    top: 0;
-    padding: 1rem 0rem 1rem 0rem;
-
-    z-index: 10;
-}
-
-header>a>img {
-    margin-left: 4rem;
-    width: 4rem;
-}
-
-.onglets {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 20%;
-    margin-right: 4rem;
-}
-
-.onglets>a {
-    font-size: 1rem;
-}
-
-
-/***************************CONTENU*******************************/
-div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-    margin-top: 8rem;
-    margin-bottom: 5rem;
-}
-
-.qui{
-    font-size: 1rem;
-    text-align: left;
-    margin-bottom: 15rem;
-}
-
-.qui>a>img{
-    width: 3.5rem;
-    opacity: 0.9;
-    margin-left: 2rem;
-}
-
-.qui>a{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    font-family: "bold";
-}
-
-.qui>p{
-    font-family: "bold";
-}
-
-/******************************FOOTER*****************************/
-/*FOOTER*/
-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    margin: 0 4rem 2rem 4rem;
-    padding-top: 2rem;
-
-    border-top: solid 0.1rem rgb(24, 28, 54);
-
-    z-index: 10;
-}
-
-footer>a>img{
-    width: 3rem;
-}
+</html>
