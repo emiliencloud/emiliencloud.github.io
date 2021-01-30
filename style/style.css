@@ -236,6 +236,16 @@ header>a>img {
     grid-row-end: 3;
 }
 
+.image5 {
+    background-image: url(../medias/images/3D/link2.png);
+    background-size: cover;
+    background-position: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
 /******************************Adobe*****************************/
 /*Adobe*/
 
