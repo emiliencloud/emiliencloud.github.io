@@ -654,7 +654,7 @@ body>h1 {
     /******************************MODELISATION*****************************/
 
     .section1 {
-        margin: 20rem 1.5rem 1rem 1.5rem;
+        margin: 1rem 1.5rem 1rem 1.5rem;
 
         height: 30rem;
 
@@ -668,6 +668,7 @@ body>h1 {
         width: 100%;
         text-align: center;
         font-family: "bold";
+        margin: 20rem 0 0 0;
     }
 
     .une {
@@ -711,9 +712,6 @@ body>h1 {
 
     /*MODELISATION*/
     .modelisation3d {
-        position: absolute;
-        top: 93rem;
-
         width: 100%;
         text-align: center;
         font-family: "bold";
@@ -723,8 +721,6 @@ body>h1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-
-        margin-top: 10rem;
     }
 
     .contenus3d>a {
@@ -765,6 +761,47 @@ body>h1 {
         transition: 0.25s;
     }
 
+
+    .image7 {
+        background-image: url(../medias/images/3D/japan_scene/japan_scene_1.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .image6 {
+        background-image: url(../medias/images/3D/link1_scene.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .image5 {
+        background-image: url(../medias/images/3D/link2.png);
+        background-size: cover;
+        background-position: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .image2 {
+        background-image: url(../medias/images/3D/insta_delorean_b2f.png);
+        background-size: cover;
+        background-position: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
     .image1 {
         background-image: url(../medias/images/3D/delorean_insta_1.png);
         background-size: cover;
@@ -775,29 +812,8 @@ body>h1 {
         grid-row-end: 4;
     }
 
-    .image2 {
-        background-image: url(../medias/images/3D/insta_delorean_b2f.png);
-        background-size: cover;
-        background-position: center;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
     .image3 {
         background-image: url(../medias/images/3D/super_charger_insta.png);
-        background-size: cover;
-        background-position: center;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-
-    .image4 {
-        background-image: url(../medias/images/3D/rendu_instagram.png);
         background-size: cover;
         background-position: center;
         grid-column-start: 2;
@@ -806,25 +822,16 @@ body>h1 {
         grid-row-end: 4;
     }
 
-    .image5 {
-        background-image: url(../medias/images/3D/link1.png);
-        background-size: cover;
-        background-position: center;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-
-    .image6 {
-        background-image: url(../medias/images/3D/link1_scene.jpg);
+    .image4 {
+        background-image: url(../medias/images/3D/rendu_instagram.png);
         background-size: cover;
         background-position: center;
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
     }
+
 
     /******************************Adobe*****************************/
     /*Adobe*/
@@ -839,8 +846,6 @@ body>h1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-
-        margin-top: 7rem;
     }
 
     .creation_adobe>a {
@@ -958,7 +963,7 @@ body>h1 {
         justify-content: space-between;
         align-items: center;
 
-        margin: 7.5rem 1rem 0rem 1rem;
+        margin: 0rem 1rem 0rem 1rem;
     }
 
     .audiovisu2 {
