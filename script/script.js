@@ -1,15 +1,11 @@
-/******************CAROUSEL************/
-/******************Carousel d'images************/
-/* Une version d'un carousel automatisé qui permet de changer d'image après la variable "time" */
-
 var i = 0;
 var images = [
-              '../medias/images/3D/deep_leep/houses1.png',
-              '../medias/images/3D/deep_leep/houses3.png',
-              '../medias/images/3D/deep_leep/intérieur1.png',
-              '../medias/images/3D/deep_leep/main_character.png',
-              '../medias/images/3D/deep_leep/trees1.png'] ;
-var time = 3000;
+              'medias/images/3D/fin.jpg',
+              'medias/images/3D/labo_scene1.jpg',
+              'medias/images/3D/link3_scene.jpg',
+              'medias/images/3D/japan_scene/japan_scene_1.jpg',
+              'medias/images/3D/super_charger_insta.png'] ;
+var time = 2500;
 
 function changeImg(){
 
