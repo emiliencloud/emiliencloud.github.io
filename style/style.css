@@ -266,12 +266,33 @@ body>h1 {
         transition: 0.25s;
     }
 
-    .image7 {
-        background-image: url(../medias/images/3D/japan_scene/japan_scene_1.jpg);
+
+    .image9 {
+        background-image: url(../medias/images/3D/fin.jpg);
         background-size: cover;
         background-position: center;
         grid-column-start: 2;
         grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .image8 {
+        background-image: url(../medias/images/3D/labo_scene1.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .image7 {
+        background-image: url(../medias/images/3D/japan_scene/japan_scene_1.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-column-start: 4;
+        grid-column-end: 5;
         grid-row-start: 1;
         grid-row-end: 2;
     }
@@ -280,28 +301,28 @@ body>h1 {
         background-image: url(../medias/images/3D/link1_scene.jpg);
         background-size: cover;
         background-position: center;
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
     }
 
     .image5 {
         background-image: url(../medias/images/3D/link2.png);
         background-size: cover;
         background-position: center;
-        grid-column-start: 4;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
     }
 
     .image2 {
         background-image: url(../medias/images/3D/insta_delorean_b2f.png);
         background-size: cover;
         background-position: center;
-        grid-column-start: 2;
-        grid-column-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 5;
         grid-row-start: 2;
         grid-row-end: 3;
     }
@@ -310,28 +331,28 @@ body>h1 {
         background-image: url(../medias/images/3D/delorean_insta_1.png);
         background-size: cover;
         background-position: center;
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
     }
 
     .image3 {
         background-image: url(../medias/images/3D/super_charger_insta.png);
         background-size: cover;
         background-position: center;
-        grid-column-start: 4;
-        grid-column-end: 5;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
     }
 
     .image4 {
         background-image: url(../medias/images/3D/rendu_instagram.png);
         background-size: cover;
         background-position: center;
-        grid-column-start: 2;
-        grid-column-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 5;
         grid-row-start: 3;
         grid-row-end: 4;
     }
@@ -443,14 +464,14 @@ body>h1 {
     }
 
     .image6_1 {
-        background-image: url(../medias/images/illustrator/dossier_client-08.png);
-        border: rgb(24, 28, 54) solid 0.08rem;
+        background-image: url(../medias/images/photoshop/dossier_client.PNG);
         background-size: cover;
         background-position: center;
         grid-column-start: 4;
         grid-column-end: 5;
         grid-row-start: 2;
         grid-row-end: 3;
+        filter: invert(0.9);
     }
 
     /******************************Audio*****************************/
@@ -762,14 +783,35 @@ body>h1 {
     }
 
 
-    .image7 {
-        background-image: url(../medias/images/3D/japan_scene/japan_scene_1.jpg);
+    
+    .image9 {
+        background-image: url(../medias/images/3D/fin.jpg);
         background-size: cover;
         background-position: center;
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
+    }
+
+    .image8 {
+        background-image: url(../medias/images/3D/labo_scene1.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .image7 {
+        background-image: url(../medias/images/3D/japan_scene/japan_scene_1.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
     }
 
     .image6 {
@@ -778,8 +820,8 @@ body>h1 {
         background-position: center;
         grid-column-start: 2;
         grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
     }
 
     .image5 {
@@ -788,26 +830,26 @@ body>h1 {
         background-position: center;
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
     }
 
     .image2 {
         background-image: url(../medias/images/3D/insta_delorean_b2f.png);
         background-size: cover;
         background-position: center;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
     }
 
     .image1 {
         background-image: url(../medias/images/3D/delorean_insta_1.png);
         background-size: cover;
         background-position: center;
-        grid-column-start: 1;
-        grid-column-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
         grid-row-start: 3;
         grid-row-end: 4;
     }
@@ -816,22 +858,21 @@ body>h1 {
         background-image: url(../medias/images/3D/super_charger_insta.png);
         background-size: cover;
         background-position: center;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-
-    .image4 {
-        background-image: url(../medias/images/3D/rendu_instagram.png);
-        background-size: cover;
-        background-position: center;
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 4;
         grid-row-end: 5;
     }
 
+    .image4 {
+        background-image: url(../medias/images/3D/rendu_instagram.png);
+        background-size: cover;
+        background-position: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
 
     /******************************Adobe*****************************/
     /*Adobe*/
@@ -938,7 +979,7 @@ body>h1 {
     }
 
     .image6_1 {
-        background-image: url(../medias/images/illustrator/dossier_client-08.png);
+        background-image: url(../medias/images/illustrator/dossier_client.png);
         border: rgb(24, 28, 54) solid 0.08rem;
         background-size: cover;
         background-position: center;
