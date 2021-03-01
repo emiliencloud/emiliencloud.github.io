@@ -109,24 +109,31 @@ body>h1 {
     }
 
     /******************************PRESENTATION*****************************/
-    .presentation {
+    .presentation1 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+
+        margin: 14rem 0 0 0;
+    }
+    .presentation2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         margin: 14rem 0 0 0;
     }
 
-    .presentation>img {
+    .presentation1>img {
         width: 10rem;
     }
 
-    .presentation>p {
-        text-align: center;
+    .presentation1>p {
+        text-align: left;
+        width: 25rem;
     }
 
-    .presentation>p:first-of-type {
+    .presentation1>p:first-of-type {
         font-family: "bold";
         font-size: 2rem;
 
@@ -135,6 +142,25 @@ body>h1 {
         -webkit-text-fill-color: transparent;
 
         margin: 2rem 0 2rem 0;
+    }
+
+    .accueil {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        margin: 0 12rem 0 12rem;
+        
+    }
+
+    #slide {
+        width: 40rem;
+        height: 23rem;
+
+        border-radius: 10px;
+        box-shadow: 10px 10px 20px #cccccc,
+            -10px -10px 20px #ffffff;
     }
 
     .decouvrir {
@@ -471,7 +497,6 @@ body>h1 {
         grid-column-end: 5;
         grid-row-start: 2;
         grid-row-end: 3;
-        filter: invert(0.9);
     }
 
     /******************************Audio*****************************/
@@ -627,7 +652,7 @@ body>h1 {
     }
 
     /******************************PESENTATION*****************************/
-    .presentation {
+    .presentation1 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -635,16 +660,19 @@ body>h1 {
 
         margin: 14rem 2rem 0 2rem;
     }
+    .presentation2 {
+        display: none;
+    }
 
-    .presentation>img {
+    .presentation1>img {
         width: 10rem;
     }
 
-    .presentation>p {
+    .presentation1>p {
         text-align: center;
     }
 
-    .presentation>p:first-of-type {
+    .presentation1>p:first-of-type {
         font-family: "bold";
         font-size: 2rem;
 
@@ -783,7 +811,7 @@ body>h1 {
     }
 
 
-    
+
     .image9 {
         background-image: url(../medias/images/3D/fin.jpg);
         background-size: cover;
@@ -979,8 +1007,7 @@ body>h1 {
     }
 
     .image6_1 {
-        background-image: url(../medias/images/illustrator/dossier_client.png);
-        border: rgb(24, 28, 54) solid 0.08rem;
+        background-image: url(../medias/images/photoshop/dossier_client.PNG);
         background-size: cover;
         background-position: center;
         grid-column-start: 2;
