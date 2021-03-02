@@ -115,20 +115,24 @@ iframe {
         justify-content: space-around;
         align-items: center;
 
-        margin-top: 8rem;
-        margin-bottom: 5rem;
+        margin: 8rem 4rem 5rem 4rem;
     }
 
     .qui {
         font-size: 1rem;
         text-align: left;
         margin-bottom: 15rem;
+        width: 40rem;
     }
 
-    .qui>a>img {
+    .qui>article>a>img {
         width: 3.5rem;
         opacity: 0.9;
         margin-left: 2rem;
+    }
+
+    .qui>article>a:nth-of-type(2)>img{
+        filter: invert(1);
     }
 
     .qui>a {
@@ -139,8 +143,18 @@ iframe {
         font-family: "bold";
     }
 
+    .qui>article{
+        width: 10rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 0 25rem;
+    }
+
     .qui>p {
         font-family: "bold";
+        text-align: right;
     }
 
     /******************************FOOTER*****************************/
