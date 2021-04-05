@@ -1,0 +1,283 @@
+@font-face {
+    font-family: "light";
+    src: url(../medias/fonts/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: "regular";
+    src: url(../medias/fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: "bold";
+    src: url(../medias/fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: "black";
+    src: url(../medias/fonts/Lato-Black.ttf);
+}
+
+
+/***************************************ALL********************************************/
+* {
+    color: whitesmoke;
+    font-family: "light";
+    /*cursor: none;*/
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to top right, rgb(25, 25, 25), black);
+    background-attachment: fixed;
+
+    width: 100%;
+    height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+/****************************************SCROLL SNAP****************************************/
+/*effet pour réaliser "l'aimant" à chaque slide */
+html {
+    scroll-snap-type: both proximity;
+    scroll-behavior: smooth;
+}
+
+html section {
+    scroll-snap-align: start;
+}
+
+.scroll {
+    position: fixed !important;
+    width: calc(540px * 2.5 / 4) !important;
+    height: calc(540px * 1.5 / 4) !important;
+    top: 5vh !important;
+    right: 5% !important;
+}
+
+
+/***************************************PROGRESSION********************************************/
+.progress-section {
+    position: fixed;
+    right: 50px;
+    top: 35%;
+    width: 50px;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    will-change: transform;
+    transition: .3s ease-out;
+
+    z-index: 50;
+}
+
+.progress-bar-wrap {
+    position: relative;
+    width: 3px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(80, 80, 80);
+
+    z-index: 50;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background-color: whitesmoke;
+
+    z-index: 50;
+}
+
+.progress-num {
+    font-family: "regular";
+    color: whitesmoke;
+    align-self: center;
+
+    z-index: 50;
+}
+
+
+/***************************************HEADER********************************************/
+
+/***************************************MENU********************************************/
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    bottom: 2.2rem;
+    left: 25%;
+    right: 25%;
+    width: 50%;
+
+    z-index: 100;
+}
+
+nav>a {
+    font-family: "light";
+    text-decoration: none;
+
+    display: inline-block;
+}
+
+.hover::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: whitesmoke;
+    transition: width .5s;
+}
+
+.hover:hover::after {
+    width: 100%;
+    transition: width .5s;
+}
+
+nav>a:nth-of-type(3){
+    font-size: 2rem;
+}
+nav>a:nth-of-type(3):hover{
+    transform: scale(1.5);
+    transition: .5s;
+}
+nav>a:nth-of-type(3):not(:hover){
+    transition: .5s;
+}
+
+/***************************************SLIDE0********************************************/
+.slide0 {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide0>article {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 18rem 12rem 18rem;
+}
+
+.slide0>article>img {
+    width: 12rem;
+}
+
+.slide0>article>p {
+    text-align: justify;
+    margin: 0 5rem 0 0;
+}
+
+.slide0>h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2rem;
+    margin: 3rem 0 0 0;
+}
+
+.slide0>h1:hover {
+    letter-spacing: 2.5rem;
+    transition: .5s;
+}
+
+.slide0>h1:not(:hover) {
+    transition: .5s;
+}
+
+/***************************************SLIDE1********************************************/
+.slide1 {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgb(20, 20, 20), black, rgb(20, 20, 20));
+    background-attachment: fixed;
+}
+
+
+.slide1>h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2rem;
+    margin: 3rem 0 0 0;
+
+}
+
+.slide1>h1:hover {
+    letter-spacing: 2.5rem;
+    transition: .5s;
+}
+
+.slide1>h1:not(:hover) {
+    transition: .5s;
+}
+
+.slide1>div{
+    height: 80vh;
+    display: grid;
+    align-self: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 5% 10rem 3rem 10rem;
+}
+.bio{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.diplomes{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.competences{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.divers{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: -3rem 0 0 0;
+}
+
+.slide1>div>article>h2{
+    padding-left: 1rem;
+    border-left: solid whitesmoke 2px;
+}
+.slide1>div>article{
+    padding: 0 2rem 0 2rem;
+}
+
+.cv:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+.cv:not(:hover){
+    transition: .5s;
+}
+
+/***************************************FOOTER********************************************/

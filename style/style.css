@@ -1,0 +1,657 @@
+@font-face {
+    font-family: "light";
+    src: url(../medias/fonts/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: "regular";
+    src: url(../medias/fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: "bold";
+    src: url(../medias/fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: "black";
+    src: url(../medias/fonts/Lato-Black.ttf);
+}
+.msg_tel {
+    display: none;
+}
+
+/***************************************ALL********************************************/
+* {
+    color: whitesmoke;
+    font-family: "light";
+    /*cursor: none;*/
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to top right, rgb(25, 25, 25), black);
+    background-attachment: fixed;
+
+    width: 100%;
+    height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+/****************************************SCROLL SNAP****************************************/
+/*effet pour réaliser "l'aimant" à chaque slide */
+html {
+    scroll-snap-type: both proximity;
+    scroll-behavior: smooth;
+}
+
+html section {
+    scroll-snap-align: start;
+}
+
+.scroll {
+    position: fixed !important;
+    width: calc(540px * 2.5 / 4) !important;
+    height: calc(540px * 1.5 / 4) !important;
+    top: 5vh !important;
+    right: 5% !important;
+}
+
+
+/***************************************PROGRESSION********************************************/
+.progress-section {
+    position: fixed;
+    right: 50px;
+    top: 35%;
+    width: 50px;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    will-change: transform;
+    transition: .3s ease-out;
+
+    z-index: 50;
+}
+
+.progress-bar-wrap {
+    position: relative;
+    width: 3px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(80, 80, 80);
+
+    z-index: 50;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background-color: whitesmoke;
+
+    z-index: 50;
+}
+
+.progress-num {
+    font-family: "regular";
+    color: whitesmoke;
+    align-self: center;
+
+    z-index: 50;
+}
+
+
+/***************************************HEADER********************************************/
+
+/***************************************MENU********************************************/
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    bottom: 3rem;
+    left: 25%;
+    right: 25%;
+    width: 50%;
+
+    z-index: 100;
+}
+
+nav>a {
+    font-family: "light";
+    text-decoration: none;
+
+    display: inline-block;
+}
+
+.hover::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: whitesmoke;
+    transition: width .5s;
+}
+
+.hover:hover::after {
+    width: 100%;
+    transition: width .5s;
+}
+
+
+/***************************************PRESENTATION********************************************/
+.slide0>section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.titre {
+    font-family: "light";
+    font-size: 5rem;
+    margin: 25vh 0 0 0;
+    color: rgb(245, 245, 245);
+}
+
+.titre:hover {
+    letter-spacing: 1rem;
+    transition: 0.75s;
+}
+
+.nom {
+    font-family: "light";
+    font-size: 3rem;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.nom:hover {
+    letter-spacing: 0.5rem;
+    transition: 0.75s;
+}
+
+.presentation {
+    font-family: "light";
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.slide0>section>p:not(:hover) {
+    transition: 0.75s;
+}
+
+.slide0>section>article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 14rem;
+}
+
+.slide0>section>article>a>img {
+    width: 3rem;
+}
+
+.slide0>section>article>a>img:hover {
+    transform: scale(1.5);
+    transition: 0.5s;
+}
+
+.slide0>section>article>a>img:not(:hover) {
+    transition: 0.5s;
+}
+
+
+
+
+/***************************************CONTENU********************************************/
+
+/***************SLIDE0********************/
+.slide0 {
+    height: 100vh;
+}
+
+/***************SLIDE1********************/
+.slide1 {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(20, 20, 20), black, rgb(20, 20, 20));
+    background-attachment: fixed;
+}
+
+.link {
+    font-family: "light";
+    font-size: 2rem;
+    text-decoration: none;
+    padding-left: 63%;
+}
+
+.link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: whitesmoke;
+    transition: width .5s;
+    z-index: 25;
+}
+
+.link:hover::after {
+    width: 100%;
+    transition: width .5s;
+}
+
+.slide1>article {
+    position: absolute;
+    font-family: "bold";
+    margin: 2rem 0 0 0;
+    left: 3rem;
+    right: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.slide1>article>h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2rem;
+}
+
+.slide1>article>h1:hover {
+    letter-spacing: 2.5rem;
+    transition: .5s;
+}
+
+.slide1>article>h1:not(:hover) {
+    transition: .5s;
+}
+
+/*EFFET 3D*/
+.center {
+    position: relative;
+    width: 40vw;
+    top: 27.5vh;
+    left: 3rem;
+    perspective: 1200px;
+    display: flex;
+    flex-direction: row-reverse;
+    z-index: 10;
+}
+
+.center .img-card {
+    position: relative;
+    height: 350px;
+    width: 25vw;
+    transform-style: preserve-3d;
+    transition: transform .5s ease-in;
+}
+
+.img-card img {
+    position: absolute;
+    height: 100%;
+    width: 120%;
+    object-fit: cover;
+}
+
+.img-card img:nth-child(1) {
+    transform: rotateX(-270deg) translateY(-175px);
+    transform-origin: top left;
+}
+
+.img-card img:nth-child(2) {
+    transform: translateZ(175px);
+}
+
+.img-card img:nth-child(3) {
+    transform: rotateX(-90deg) translateY(175px);
+    transform-origin: bottom center;
+}
+
+.img-card img:nth-child(4) {
+    transform: rotateX(-180deg) translateY(350px) translateZ(175px);
+    transform-origin: bottom right;
+}
+
+#tab-1:checked~.img-card {
+    transform: rotateX(-90deg);
+}
+
+#tab-2:checked~.img-card {
+    transform: rotateX(0deg);
+}
+
+#tab-3:checked~.img-card {
+    transform: rotateX(90deg);
+}
+
+#tab-4:checked~.img-card {
+    transform: rotateX(180deg);
+}
+
+.sliders {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 1px;
+    top: -40px;
+}
+
+.sliders label {
+    height: 95px;
+    width: 110px;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 8px 0;
+    border-left: 2px solid rgb(66, 66, 66);
+}
+
+.sliders label:nth-child(1) {
+    margin-top: 0;
+}
+
+label img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+}
+
+label img:hover,
+#tab-1:checked~.sliders label:nth-child(1) img,
+#tab-2:checked~.sliders label:nth-child(2) img,
+#tab-3:checked~.sliders label:nth-child(3) img,
+#tab-4:checked~.sliders label:nth-child(4) img {
+    filter: grayscale(0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+input {
+    display: none;
+}
+
+/***************SLIDE2********************/
+.slide2 {
+    height: 100vh;
+    background: linear-gradient(black, rgb(20, 20, 20), black);
+    background-attachment: fixed;
+}
+
+.slide2>a {
+    margin-top: 50vh;
+}
+
+.slide2>article {
+    position: absolute;
+    font-family: "bold";
+    margin: 2rem 0 0 0;
+    left: 3rem;
+    right: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.slide2>article>h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2rem;
+}
+
+.slide2>article>h1:hover {
+    letter-spacing: 2.5rem;
+    transition: .5s;
+}
+
+.slide2>article>h1:not(:hover) {
+    transition: .5s;
+}
+
+.link2 {
+    position: relative;
+    top: 45vh;
+    font-family: "light";
+    font-size: 2rem;
+    text-decoration: none;
+    padding-left: 40vw;
+}
+
+.link2::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: whitesmoke;
+    transition: width .5s;
+    z-index: 25;
+}
+
+.link2:hover::after {
+    width: 100%;
+    transition: width .5s;
+}
+
+.graph1 {
+    width: 17.5vw;
+    height: 50vh;
+    background-color: rgb(215, 215, 215);
+    position: absolute;
+    transform: rotate(-15deg);
+    padding: 2rem;
+    top: 225vh;
+    left: 8vw;
+    z-index: 30;
+    filter: grayscale(1);
+}
+
+.graph1:hover {
+    transform: rotate(0);
+    transform: scale(1.2);
+    background: whitesmoke;
+    transition: .5s;
+    filter: grayscale(0);
+}
+
+.graph1:not(:hover) {
+    transition: .5s;
+}
+
+.slide2>div>a>img {
+    width: 100%;
+}
+
+.slide2>div>p {
+    color: black;
+    font-family: "regular";
+}
+
+.slide2>div>h2 {
+    color: black;
+    font-family: "regular";
+}
+
+.graph2 {
+    width: 17.5vw;
+    height: 50vh;
+    background-color: rgb(215, 215, 215);
+    position: absolute;
+    transform: rotate(18deg);
+    padding: 2rem;
+    top: 225vh;
+    right: 12vw;
+    z-index: 30;
+    filter: grayscale(1);
+}
+
+.graph2:hover {
+    transform: rotate(0);
+    transform: scale(1.2);
+    background: whitesmoke;
+    transition: .5s;
+    filter: grayscale(0);
+}
+
+.graph2:not(:hover) {
+    transition: .5s;
+}
+
+.graph3 {
+    width: 17.5vw;
+    height: 45vh;
+    background-color: rgb(195, 195, 195);
+    position: absolute;
+    transform: rotate(-5deg);
+    padding: 2rem;
+    top: 225vh;
+    right: 15vw;
+    z-index: 25;
+    filter: grayscale(1);
+}
+
+.graph3:hover {
+    transform: rotate(0);
+    transform: scale(1.2);
+    transition: .5s;
+    background: whitesmoke;
+    z-index: 35;
+    filter: grayscale(0);
+}
+
+.graph3:not(:hover) {
+    transition: .5s;
+}
+
+.graph4 {
+    width: 17.5vw;
+    height: 50vh;
+    background-color: rgb(195, 195, 195);
+    position: absolute;
+    transform: rotate(-5deg);
+    padding: 2rem;
+    top: 225vh;
+    left: 15vw;
+    z-index: 25;
+    filter: grayscale(1);
+}
+
+.graph4:hover {
+    transform: rotate(0);
+    transform: scale(1.2);
+    background: whitesmoke;
+    z-index: 35;
+    transition: .5s;
+    filter: grayscale(0);
+}
+
+.graph4:not(:hover) {
+    transition: .5s;
+}
+
+
+
+
+/***************SLIDE3********************/
+.slide3 {
+    height: 100vh;
+    background-image: url(../medias/background_Plan\ de\ travail\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slide3>article {
+    position: absolute;
+    font-family: "bold";
+    margin: 2rem 0 0 0;
+    left: 3rem;
+    right: 3rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.slide3>article>h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2rem;
+}
+
+.slide3>article>h1:hover {
+    letter-spacing: 2.5rem;
+    transition: .5s;
+}
+
+.slide3>article>h1:not(:hover) {
+    transition: .5s;
+}
+
+.slide3>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.slide3>div>iframe {
+    width: 400px;
+    height: 220px;
+    margin: 0 2rem 0 2rem;
+}
+
+.link3 {
+    position: relative;
+    top: -15vh;
+    font-family: "light";
+    font-size: 2rem;
+    text-decoration: none;
+    padding-left: 40vw;
+}
+
+.link3::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: whitesmoke;
+    transition: width .5s;
+    z-index: 25;
+}
+
+.link3:hover::after {
+    width: 100%;
+    transition: width .5s;
+}
+
+
+@media (max-width: 1024px) {
+
+    .msg_tel {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to top right, rgb(25, 25, 25), black);
+        text-align: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide0, .slide1, .slide2, .slide3, .progress-section, nav{
+        display: none;
+    }
+}

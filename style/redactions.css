@@ -1,0 +1,239 @@
+@font-face {
+    font-family: "light";
+    src: url(../medias/fonts/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: "regular";
+    src: url(../medias/fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: "bold";
+    src: url(../medias/fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: "black";
+    src: url(../medias/fonts/Lato-Black.ttf);
+}
+
+
+/***************************************ALL********************************************/
+* {
+    color: whitesmoke;
+    font-family: "light";
+    /*cursor: none;*/
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to top right, rgb(25, 25, 25), black);
+    background-attachment: fixed;
+
+    width: 100%;
+    height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+/****************************************SCROLL SNAP****************************************/
+/*effet pour réaliser "l'aimant" à chaque slide */
+html {
+    scroll-snap-type: both proximity;
+    scroll-behavior: smooth;
+}
+
+html section {
+    scroll-snap-align: start;
+}
+
+.scroll {
+    position: fixed !important;
+    width: calc(540px * 2.5 / 4) !important;
+    height: calc(540px * 1.5 / 4) !important;
+    top: 5vh !important;
+    right: 5% !important;
+}
+
+/***************************************PROGRESSION********************************************/
+.progress-section {
+    position: fixed;
+    right: 50px;
+    top: 35%;
+    width: 50px;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    will-change: transform;
+    transition: .3s ease-out;
+
+    z-index: 50;
+}
+
+.progress-bar-wrap {
+    position: relative;
+    width: 3px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(80, 80, 80);
+
+    z-index: 50;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background-color: whitesmoke;
+
+    z-index: 50;
+}
+
+.progress-num {
+    font-family: "regular";
+    color: whitesmoke;
+    align-self: center;
+
+    z-index: 50;
+}
+
+
+/***************************************HEADER********************************************/
+
+/***************************************MENU********************************************/
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    bottom: 3rem;
+    left: 35%;
+    right: 35%;
+    width: 30%;
+
+    z-index: 100;
+}
+
+nav>a {
+    font-family: "light";
+    text-decoration: none;
+
+    display: inline-block;
+}
+
+.hover::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: whitesmoke;
+    transition: width .5s;
+}
+
+.hover:hover::after {
+    width: 100%;
+    transition: width .5s;
+}
+
+
+/***************************************CONTENU********************************************/
+
+section{
+    height: 100vh;
+}
+
+h1 {
+    top: 3rem;
+    font-size: 1.5rem;
+    letter-spacing: 2rem;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+}
+
+h1:hover {
+    letter-spacing: 2.5rem;
+    transition: .5s;
+}
+
+h1:not(:hover) {
+    transition: .5s;
+}
+
+.iframe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    margin: 0 10% 0 10%;
+}
+.iframe>iframe{
+    margin-top: 22vh;
+    width: 70%;
+    height: 60vh;
+}
+
+.iframe>p{
+    margin-top: 22vh;
+}
+
+.iframe>p>a{
+    font-size: 1.5rem;
+    font-family: "regular";
+    text-decoration: none;
+}
+.iframe>p>a:hover{
+    letter-spacing: .5rem;
+    transition: .5s;
+}
+.iframe>p>a:not(:hover){
+    transition: .5s;
+}
+.iframe>p>a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: whitesmoke;
+    transition: width .5s;
+}
+.iframe>p>a:hover::after {
+    width: 100%;
+    transition: width .5s;
+}
+
+
+.slide0{
+    background: linear-gradient(to top right, rgb(0, 0, 0), rgb(21, 0, 39));
+    background-attachment: fixed;
+}
+
+.slide1{
+    background: linear-gradient(to top right, rgb(0, 0, 0), rgb(46, 0, 0));
+    background-attachment: fixed;
+}
+
+.slide2{
+    background: linear-gradient(to top right, rgb(25, 25, 25), black);
+    background-attachment: fixed;
+
+}
+
+.slide3{
+    background: linear-gradient(to top right, rgb(10, 0, 44), rgb(0, 0, 0), rgb(31, 0, 0));
+    background-attachment: fixed;
+
+}
