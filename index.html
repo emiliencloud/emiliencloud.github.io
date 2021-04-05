@@ -3,102 +3,137 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="medias/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="medias/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="medias/fav/favicon-16x16.png">
+    <link rel="manifest" href="medias/fav/site.webmanifest">
+    <link rel="mask-icon" href="medias/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="style/style.css">
-    <link rel="icon" type="image/png" href="medias/logo/LogoCouleur.png" />
     <title>Portfolio - Emilien COULAND</title>
 </head>
 
 <body>
-    <div class="blanc">
-        <header id="header">
-            <a href="index.html"><img src="medias/logo/LogoCouleur.png" alt=""></a>
-            <section class="onglets">
-                <a href="#3D">Créations 3D</a>
-                <a href="#adobe">Projets Graphiques</a>
-                <a href="#audio">Audiovisuels</a>
-                <a href="html/redaction.html">Rédactions</a>
-                <a href="html/apropos.html">À propos</a>
-            </section>
-        </header>
+    <div class="msg_tel">
+        <p>Version mobile <br>
+            en cours de développement...</p>
     </div>
-    <section class="accueil">
-        <article class="presentation1">
-            <img src="medias/images/photo_linkedin2.gif" alt="">
-            <p>Emilien COULAND</p>
-            <p>Etudiant à l'université de bourgogne, en DUT MMI <br>
-                (Métiers du multimédia et de l'internet)</p>
-        </article>
+
+    <div class="progress-section">
+        <div class="progress-bar-wrap">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="progress-num"></div>
+    </div>
+
+    <nav>
+        <a href="#3d" class="hover">PROJETS 3D</a>
+        <a href="#graphismes" class="hover">PROJETS GRAPHIQUES</a>
+        <a href="#audiovisuels" class="hover">AUDIOVISUELS</a>
+        <a href="html/redactions.html" class="hover">RÉDACTIONS</a>
+        <a href="html/a_propos.html" class="hover">À PROPOS</a>
+    </nav>
+
+    <section class="slide0">
+
+        <section>
+            <p class="titre">PORTFOLIO</p>
+            <p class="nom">Emilien COULAND</p>
+            <p class="presentation">
+                Etudiant à l'université de bourgogne, en DUT MMI <br>
+                (Métiers du multimédia et de l'internet)
+            </p>
+            <article>
+                <a href="https://www.instagram.com/emiliencloud/"><img src="medias/logos/logo-instagram-noir.png"
+                        alt=""></a>
+                <a href="index.html"><img src="medias/logos/logo.png" alt=""></a>
+                <a href="https://www.youtube.com/channel/UCznaktk1gSc5PCoilMUpybg"><img
+                        src="medias/logos/logo-youtube-noir.png" alt=""></a>
+            </article>
+        </section>
+
     </section>
-    <a href="#3D" class="decouvrir">Découvrir mes projets<img src="medias/logo/fleche_bas.png" alt=""></a>
-    <a href="https://www.instagram.com/emiliencloud/" class="insta">
-        <img src="medias/logo/logo-instagram-noir.png" alt="">
-    </a>
-    <a href="https://www.youtube.com/channel/UCznaktk1gSc5PCoilMUpybg" class="ytb">
-        <img src="medias/logo/logo-youtube-noir.png" alt="">
-    </a>
-    <h1 id="3D" class="ala1">À la une:</h1>
-    <br>
-    <section class="section1">
+
+    <section class="slide1" id="3d">
         <article>
-            <h1>Deep Sleep</h1>
-            Deep Sleep est un projet de jeux video d'exploration et de survie, pensé par Celian Vantillard et son cousin
-            Grégoire, ce dernier est actuellement en cours de réalisation par nous trois. Vous découvrirez donc
-            différentes images tirées de nos réalisations 3D sous blender ainsi que des images du jeux réalisé sous
-            unity.
+            <h1>PROJETS 3D</h1>
         </article>
-        <a href="html/modelisation/projet_deepsleep.html" class="une">Deep Sleep</a>
+
+        <div class="center">
+            <input type="radio" checked name="active" id="tab-1">
+            <input type="radio" name="active" id="tab-2">
+            <input type="radio" name="active" id="tab-3">
+            <input type="radio" name="active" id="tab-4">
+            <div class="sliders">
+                <label for="tab-1"><img src="medias/images/3D/DS_render1.jpg"></label>
+                <label for="tab-2"><img src="medias/images/3D/render_fauteuil_scene.jpg"></label>
+                <label for="tab-3"><img src="medias/images/3D/delorean_insta_1.png"></label>
+                <label for="tab-4"><img src="medias/images/3D/japan_scene/japan_scene_1.jpg"></label>
+            </div>
+            <div class="img-card">
+                <img src="medias/images/3D/DS_render1.jpg">
+                <img src="medias/images/3D//render_fauteuil_scene.jpg">
+                <img src="medias/images/3D/delorean_insta_1.png">
+                <img src="medias/images/3D/japan_scene/japan_scene_1.jpg">
+            </div>
+        </div>
+        <a href="html/projets_3d.html" class="link">DÉCOUVRIR PLUS</a>
+    </section>
+    <section class="slide2" id="graphismes">
+        <article>
+            <h1>PROJETS GRAPHIQUES</h1>
+        </article>
+
+        <div class="graph1">
+            <a href="html/graphismes/the_queens_gambit.html"><img src="medias/images/photoshop/tqg_.png" alt=""></a>
+            <h2>Affichage : The Queen Gambit</h2>
+            <p> Simplement une petite maquette... </p>
+        </div>
+        <div class="graph2">
+            <a href="html/graphismes/origami.html"><img src="medias/images/illustrator/iPhone-iPad-AppleWatch Space Grey.jpg" alt=""></a>
+            <h2>Origami</h2>
+            <p>Créations d'une identité visuelle pour une entreprise fictive : <br>
+                Origami était autrefois une entreprise spécialisée dans le matériel d’art spécifique au pliage de
+                papier, aussi appelé « Origami »...</p>
+        </div>
+        <div class="graph3">
+            <a href="html/graphismes/duquoc.html"><img src="medias/images/photoshop/info_duquoc_final.jpg" alt=""></a>
+            <h2>L'art avec un petit a</h2>
+            <p>Montage Photoshop à la manière de DuQuoq... </p>
+        </div>
+        <div class="graph4">
+            <a href="html/graphismes/dossier _client.html"><img src="medias/images/photoshop/dossier_client.PNG" alt=""></a>
+            <h2>Dossier client, Musée des beaux-arts de Dijon</h2>
+            <p>Ce projet avait pour but de créer un évènement pour les beaux-arts de Dijon afin d'attirer de nouveau un
+                public jeune au sein du musée : ...</p>
+        </div>
+
+        <a href="html/projets_graphiques.html" class="link2">DÉCOUVRIR PLUS</a>
     </section>
 
-    <h1 class="modelisation3d">Créations 3D</h1>
-    <section class="contenus3d">
-        <a href="html/modelisation/projet_briquet.html" class="image9">Découvrir le projet</a>
-        <a href="html/modelisation/projet_preserver.html" class="image8">Découvrir le projet</a>
-        <a href="html/modelisation/projet_jap.html" class="image7">Découvrir le projet</a>
-        <a href="html/modelisation/projet_delorean1.html" class="image1">Découvrir le projet</a>
-        <a href="html/modelisation/projet_delorean2.html" class="image2">Découvrir le projet</a>
-        <a href="html/modelisation/projet_hellaphant.html" class="image3">Découvrir le projet</a>
-        <a href="html/modelisation/projet_ephemere.html" class="image4">Découvrir le projet</a>
-        <a href="html/modelisation/projet_linkscene.html" class="image6">Découvrir le projet</a>
-        <a href="html/modelisation/projet_link.html" class="image5">Découvrir le projet</a>
-    </section>
+    <section class="slide3" id="audiovisuels">
+        <article>
+            <h1>AUDIOVISUELS</h1>
+        </article>
 
-    <h1 id="adobe" class="adobe">Créations Adobe</h1>
-    <section class="creation_adobe">
-        <a href="html/adobe/the_queens_gambit.html" class="image1_1">Découvrir le projet</a>
-        <a href="html/adobe/origami.html" class="image2_1">Découvrir le projet</a>
-        <a href="html/adobe/owlcrea.html" class="image3_1">Découvrir le projet</a>
-        <a href="html/adobe/salon_du_livre.html" class="image4_1">Découvrir le projet</a>
-        <a href="html/adobe/le_coq_montage.html" class="image5_1">Découvrir le projet</a>
-        <a href="html/adobe/dossier _client.html" class="image6_1">Découvrir le projet</a>
-    </section>
-
-    <h1 id="audio" class="audio">Audiovisuel</h1>
-    <section class="audiovisu1">
-        <article> <iframe width="560" height="315" src="https://www.youtube.com/embed/0Kn5nwjAxXY" frameborder="0"
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0Kn5nwjAxXY" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe></article>
-        <article><iframe width="560" height="315" src="https://www.youtube.com/embed/DdlWAsNhWjk" frameborder="0"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nE98T6lSu3I" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe></article>
+                allowfullscreen></iframe>
+        </div>
+        <a href="https://www.youtube.com/channel/UCznaktk1gSc5PCoilMUpybg" class="link3">DÉCOUVRIR PLUS</a>
     </section>
 
-    <section class="audiovisu2">
-        <article><iframe width="560" height="315" src="https://www.youtube.com/embed/Rbyfefl-Kvg" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe></article>
-        <article><iframe width="560" height="315" src="https://www.youtube.com/embed/nE98T6lSu3I" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe></article>
-    </section>
 
-    <div class="blanc2">
-        <footer>
-            <p>© 2021 - Emilien COULAND</p>
-            <p>emiliencloud@gmail.com</p>
-            <a href="#header"><img src="medias/logo/fleche_haut.png" alt=""></a>
-        </footer>
-    </div>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
