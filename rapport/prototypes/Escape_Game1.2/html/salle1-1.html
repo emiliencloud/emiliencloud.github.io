@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style-salle.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+    <link rel="stylesheet" href="../style/code.css">
+    <link rel="stylesheet" href="../style/style_gamme/gamme1.css">
+    <link rel="stylesheet" href="../style/style_puzzle/puzzle1.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <title>Escape Game 1.2</title>
+</head>
+
+<body>
+    <!--SCRIPT PERSO-->
+    <script src="../script/script.js"></script>
+    <script src="../script/gamme-function.js/gamme-script.js"></script>
+    <script src="../script/atelier-display.js"></script>
+    <script src="../script/code_system.js"></script>
+
+    <!--SCRIPT HOWLER JS-->
+    <script src="node_modules/howler/dist/howler.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!--SCRIPT PERSO : PUZZLE-->
+    <script src="../script/puzzle-function.js/puzzle-button.js"></script>
+    <script src="../script/puzzle-function.js/puzzle-drag-drop.js"></script>
+    <script src="../script/puzzle-function.js/puzzle-edit.js"></script>
+    <script src="../script/puzzle-function.js/puzzle-sound.js.js"></script>
+
+
+    <!--ECRAN DE CHARGEMENT-->
+    <section class="container">
+        <img src="../medias/images/logos/anthropi.png" alt="">
+        <p class="text"> prépare votre espace de formation</p>
+    </section>
+
+
+    <!--CODE-->
+    <div id="code">
+        <button id="codeNone" onclick="displayNoneCode()">✗</button>
+        <label for="number">CODE D'ENTRÉE 🔓:</label>
+        <input type="text" name="number" id="number" autofocus>
+        <input type="text" id="verif" value="2704">
+        <button onclick="code()" id="valid">VALIDER</button>
+        <a href="html/salle1-1.html" id="run">PROCHAINE SALLE ⇢</a>
+    </div>
+
+    <!--FICHE EXPLICATION-->
+    <button id="btn-exp" onclick="ex()"><b>?</b></button>
+    <!--FICHE SALLE-->
+    <button id="btn-salles" onclick="allSalle()"><b>🔓</b></button>
+
+    <button id="salle1" class="salle-all"><a href="../index.html">1</a></button>
+    <button id="salle2" class="salle-all"><a href="salle1-1.html">2</a></button>
+    <button id="salle3" class="salle-all">3</button>
+    <button id="salle4" class="salle-all">4</button>
+    <button id="salle5" class="salle-all">5</button>
+    <button id="salle6" class="salle-all">6</button>
+    <button id="salle-close" onclick="salleClose()">✗</button>
+
+
+    <!--FICHE INFORMATION-->
+    <button id="btn-info" onclick="info()"><b>📍</b></button>
+
+    <div id="bulle-info">
+        <section>
+            <img src="../medias/images/render/machine-turing.jpg" alt="Turing's machine">
+            <article>
+                <h2>LA MACHINE DE TURING</h2>
+                <p>
+                    En informatique théorique, <br> une machine de Turing est un modèle abstrait du fonctionnement des
+                    appareils mécaniques de calcul, tel un ordinateur. <br> <br> Ce modèle a été imaginé par Alan Turing en 1936,
+                    en vue de donner une définition précise au concept d’algorithme ou de « procédure mécanique ».
+                </p>
+
+                <a href="https://fr.wikipedia.org/wiki/Machine_de_Turing" target="_blank">Plus d'infos</a>
+            </article>
+        </section>
+        <button id="close" onclick="fermer()">✗</button>
+    </div>
+
+
+    <!--GAMMME N°1-->
+    <section id="jeu-n1">
+
+        <button onclick="gamme1Retour()" id="puzzle-retour">↺</button>
+        <button onclick="gamme1Explain()" id="puzzle-explain"><b>?</b></button>
+
+        <article>
+            <div class="audio">
+                <h1>GAMME #1</h1>
+                <p>
+                    L'objectif est de faire appel à votre inconscient, lors d'un appel la principale source
+                    d'information est
+                    l'appelant, cependant votre cerveau peut recréer une image simplement avec les bruits environnant ce
+                    dernier.
+                    <br><br>
+                    Après avoir écouté un court enregistrement vous devrez rapporter un maximum d'informations afin
+                    d'identifier le lieu en question.
+                </p>
+                <audio src="../medias/audio/gamme01.ogg" controls></audio>
+            </div>
+            <div class="questions">
+                <form action="" method="">
+                    <h2>Questionnaire :</h2>
+                    <label for="id">➤ NOM Prénom (du Stagiaire) :</label> <br>
+                    <input type="text" id="id" required>
+
+                    <p>➤ La scène se déroule en extérieur ou en intérieur ?</p>
+                    <input type="radio" name="lieu" id="exterieur" value="Extérieur" class="lieu">
+                    <label for="exterieur">Extérieur</label>
+
+                    <input type="radio" name="lieu" id="interieur" value="Intérieur" class="lieu">
+                    <label for="interieur">Intérieur</label>
+
+                    <p>➤ Éléments identifiés :</p>
+                    <input type="checkbox" id="musiques" class="identi">
+                    <label for="musiques">Musiques</label>
+
+                    <input type="checkbox" id="pub" class="identi">
+                    <label for="pub">Publicités</label>
+
+                    <input type="checkbox" id="oiseaux" class="identi">
+                    <label for="oiseaux">Oiseaux</label>
+
+                    <input type="checkbox" id="caisses" class="identi">
+                    <label for="caisses">Caisses</label>
+
+                    <input type="checkbox" id="cintres" class="identi">
+                    <label for="cintres">Cintres</label>
+
+                    <input type="checkbox" id="femme" class="identi">
+                    <label for="femme">Voix Femme</label>
+
+                    <input type="checkbox" id="homme" class="identi">
+                    <label for="homme">Voix Homme</label>
+
+                    <input type="checkbox" id="chien" class="identi">
+                    <label for="chien">Chien</label>
+
+                    <input type="checkbox" id="enfants" class="identi">
+                    <label for="enfants">Enfants</label>
+
+                    <p>➤ Informations supplémentaires :</p>
+                    <textarea name="autres" id="info-supp" cols="30" rows="10"></textarea>
+                    <br>
+                    <input type="button" onclick="gammeEnvoie()" value="Terminer" id="envoyer">
+
+                </form>
+            </div>
+        </article>
+
+    </section>
+
+    <!--GAMMME N°2-->
+    <section id="jeu-n2">
+
+        <button onclick="gamme2Retour()" id="puzzle-retour">↺</button>
+        <button onclick="gamme2Explain()" id="puzzle-explain"><b>?</b></button>
+
+        <article>
+            <div class="audio">
+                <h1>GAMME #2</h1>
+                <p>
+                    L'objectif est de faire appel à votre inconscient, lors d'un appel la principale source
+                    d'information est
+                    l'appelant, cependant votre cerveau peut recréer une image simplement avec les bruits environnant ce
+                    dernier.
+                    <br><br>
+                    Après avoir écouté un court enregistrement vous devrez rapporter un maximum d'informations afin
+                    d'identifier le lieu en question.
+                </p>
+                <audio src="../medias/audio/gamme01.ogg" controls></audio>
+            </div>
+            <div class="questions">
+                <form action="" method="">
+                    <h2>Questionnaire :</h2>
+
+                    <label for="id">➤ NOM Prénom (du Stagiaire) :</label> <br>
+                    <input type="text" id="id" required>
+
+                    <p>➤ La scène se déroule en extérieur ou en intérieur ?</p>
+                    <input type="radio" name="lieu" id="exterieur2" value="Extérieur" class="lieu">
+                    <label for="exterieur2">Extérieur</label>
+
+                    <input type="radio" name="lieu" id="interieur2" value="Intérieur" class="lieu">
+                    <label for="interieur2">Intérieur</label>
+
+                    <p>➤ Éléments identifiés :</p>
+                    <input type="checkbox" id="Oiseaux2" class="identi">
+                    <label for="Oiseaux2">Oiseaux</label>
+
+                    <input type="checkbox" id="porte2" class="identi">
+                    <label for="porte2">Porte</label>
+
+                    <input type="checkbox" id="chat2" class="identi">
+                    <label for="chat2">Chat</label>
+
+                    <input type="checkbox" id="jouets2" class="identi">
+                    <label for="jouets2">Jouets</label>
+
+                    <input type="checkbox" id="bebe2" class="identi">
+                    <label for="bebe2">Bébé qui pleure</label>
+
+                    <input type="checkbox" id="Pas2" class="identi">
+                    <label for="Pas2">Pas</label>
+
+                    <input type="checkbox" id="pub2" class="identi">
+                    <label for="pub2">Publicités</label>
+
+                    <input type="checkbox" id="chien2" class="identi">
+                    <label for="chien2">Chien</label>
+
+                    <input type="checkbox" id="enfants2" class="identi">
+                    <label for="enfants2">Enfants</label>
+
+                    <p>➤ Informations supplémentaires :</p>
+                    <textarea name="autres" id="info-supp" cols="30" rows="10"></textarea>
+                    <br>
+                    <input type="button" onclick="gamme2Envoie()" value="Terminer" id="envoyer">
+
+                </form>
+            </div>
+        </article>
+
+    </section>
+
+    <!--GAMMME N°3-->
+    <section id="jeu-n3">
+
+        <button onclick="gamme3Retour()" id="puzzle-retour">↺</button>
+        <button onclick="gamme3Explain()" id="puzzle-explain"><b>?</b></button>
+
+        <article>
+            <div class="audio">
+                <h1>GAMME #3</h1>
+                <p>
+                    L'objectif est de faire appel à votre inconscient, lors d'un appel la principale source
+                    d'information est
+                    l'appelant, cependant votre cerveau peut recréer une image simplement avec les bruits environnant ce
+                    dernier.
+                    <br><br>
+                    Après avoir écouté un court enregistrement vous devrez rapporter un maximum d'informations afin
+                    d'identifier le lieu en question.
+                </p>
+                <audio src="../medias/audio/gamme01.ogg" controls></audio>
+            </div>
+            <div class="questions">
+                <form action="" method="">
+                    <h2>Questionnaire :</h2>
+
+                    <label for="id">➤ NOM Prénom (du Stagiaire) :</label> <br>
+                    <input type="text" id="id" required>
+
+                    <p>➤ La scène se déroule en extérieur ou en intérieur ?</p>
+                    <input type="radio" name="lieu" id="exterieur3" value="Extérieur" class="lieu">
+                    <label for="exterieur3">Extérieur</label>
+
+                    <input type="radio" name="lieu" id="interieur3" value="Intérieur" class="lieu">
+                    <label for="interieur3">Intérieur</label>
+
+                    <p>➤ Éléments identifiés :</p>
+                    <input type="checkbox" id="voix3" class="identi">
+                    <label for="voix3">Voix multiple</label>
+
+                    <input type="checkbox" id="femme3" class="identi">
+                    <label for="femme3">Voix femme</label>
+
+                    <input type="checkbox" id="oiseaux3" class="identi">
+                    <label for="oiseaux3">Oiseaux</label>
+
+                    <input type="checkbox" id="ballon3" class="identi">
+                    <label for="ballon3">Ballon</label>
+
+                    <input type="checkbox" id="velo3" class="identi">
+                    <label for="velo3">Vélo</label>
+
+                    <input type="checkbox" id="voiture3" class="identi">
+                    <label for="voiture3">Voitures</label>
+
+                    <input type="checkbox" id="klaxon3" class="identi">
+                    <label for="klaxon3">Klaxon</label>
+
+                    <input type="checkbox" id="chien3" class="identi">
+                    <label for="chien3">Chien</label>
+
+                    <input type="checkbox" id="enfants3" class="identi">
+                    <label for="enfants3">Enfants</label>
+
+                    <p>➤ Informations supplémentaires :</p>
+                    <textarea name="autres" id="info-supp" cols="30" rows="10"></textarea>
+                    <br>
+                    <input type="button" onclick="gamme3Envoie()" value="Terminer" id="envoyer">
+
+                </form>
+            </div>
+        </article>
+
+    </section>
+
+
+    <!--PUZZLE N°1----------------------------------------------------------------------------------------------------------------->
+    <!--PRISE DE NOTE-->
+    <div class="note" id="note1">
+        <h2>✎1</h2>
+        <div id="edit-menu" class="edit">
+            <button class="bleu" id="bleu" onclick="bleu1()"></button>
+            <button class="vert" id="vert" onclick="vert1()"></button>
+            <button class="orange" id="orange" onclick="orange1()"></button>
+            <button class="marron" id="marron" onclick="marron1()"></button>
+            <button class="rouge" id="rouge" onclick="rouge1()"></button>
+            <button class="cancel" id="cancel" onclick="cancel1()">ANNULER</button>
+            <button class="cancel-all" id="cancel-all" onclick="cancelAll()">TOUT ANNULER</button>
+        </div>
+        <button id="note-close1" onclick="noteClose1()">✗</button>
+        <input placeholder="Titre" type="text" name="1" id="">
+        <textarea placeholder="Notes..." name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="note" id="note2">
+        <h2>✎2</h2>
+        <div id="edit2-menu" class="edit">
+            <button class="bleu" id="bleu2" onclick="bleu2()"></button>
+            <button class="vert" id="vert2" onclick="vert2()"></button>
+            <button class="orange" id="orange2" onclick="orange2()"></button>
+            <button class="marron" id="marron2" onclick="marron2()"></button>
+            <button class="rouge" id="rouge2" onclick="rouge2()"></button>
+            <button class="cancel" id="cance2" onclick="cancel2()">ANNULER</button>
+            <button class="cancel-all" id="cancel-al2" onclick="cancelAll()">TOUT ANNULER</button>
+        </div>
+        <button id="note-close1" onclick="noteClose2()">✗</button>
+        <input placeholder="Titre" type="text" name="1" id="">
+        <textarea placeholder="Notes..." name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="note" id="note3">
+        <h2>✎3</h2>
+        <div id="edit3-menu" class="edit">
+            <button class="bleu" id="bleu3" onclick="bleu3()"></button>
+            <button class="vert" id="vert3" onclick="vert3()"></button>
+            <button class="orange" id="orange3" onclick="orange3()"></button>
+            <button class="marron" id="marron3" onclick="marron3()"></button>
+            <button class="rouge" id="rouge3" onclick="rouge3()"></button>
+            <button class="cancel" id="cancel3" onclick="cancel3()">ANNULER</button>
+            <button class="cancel-all" id="cancel-all3" onclick="cancelAll()">TOUT ANNULER</button>
+        </div>
+        <button id="note-close1" onclick="noteClose3()">✗</button>
+        <input placeholder="Titre" type="text" name="1" id="">
+        <textarea placeholder="Notes..." name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="note" id="note4">
+        <h2>✎4</h2>
+        <div id="edit4-menu" class="edit">
+            <button class="bleu" id="bleu4" onclick="bleu4()"></button>
+            <button class="vert" id="vert4" onclick="vert4()"></button>
+            <button class="orange" id="orange4" onclick="orange4()"></button>
+            <button class="marron" id="marron4" onclick="marron4()"></button>
+            <button class="rouge" id="rouge4" onclick="rouge4()"></button>
+            <button class="cancel" id="cancel4" onclick="cancel4()">ANNULER</button>
+            <button class="cancel-all" id="cancel-all4" onclick="cancelAll()">TOUT ANNULER</button>
+        </div>
+        <button id="note-close1" onclick="noteClose4()">✗</button>
+        <input placeholder="Titre" type="text" name="1" id="">
+        <textarea placeholder="Notes..." name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="note" id="note5">
+        <h2>✎5</h2>
+        <div id="edit5-menu" class="edit">
+            <button class="bleu" id="bleu5" onclick="bleu5()"></button>
+            <button class="vert" id="vert5" onclick="vert5()"></button>
+            <button class="orange" id="orange5" onclick="orange5()"></button>
+            <button class="marron" id="marron5" onclick="marron5()"></button>
+            <button class="rouge" id="rouge5" onclick="rouge5()"></button>
+            <button class="cancel" id="cancel5" onclick="cancel5()">ANNULER</button>
+            <button class="cancel-all" id="cancel-all5" onclick="cancelAll()">TOUT ANNULER</button>
+        </div>
+        <button id="note-close1" onclick="noteClose5()">✗</button>
+        <input placeholder="Titre" type="text" name="1" id="">
+        <textarea placeholder="Notes..." name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="note" id="note6">
+        <h2>✎6</h2>
+        <div id="edit-menu" class="edit">
+            <button class="bleu" id="bleu6" onclick="bleu6()"></button>
+            <button class="vert" id="vert6" onclick="vert6()"></button>
+            <button class="orange" id="orange6" onclick="orange6()"></button>
+            <button class="marron" id="marron6" onclick="marron6()"></button>
+            <button class="rouge" id="rouge6" onclick="rouge6()"></button>
+            <button class="cancel" id="cancel6" onclick="cancel6()">ANNULER</button>
+            <button class="cancel-all" id="cancel-all6" onclick="cancelAll()">TOUT ANNULER</button>
+        </div>
+        <button id="note-close1" onclick="noteClose6()">✗</button>
+        <input placeholder="Titre" type="text" name="1" id="">
+        <textarea placeholder="Notes..." name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="note" id="note7">
+        <h2>✎7</h2>
+        <div id="edit2-menu" class="edit">
+            <button class="bleu" id="bleu7" onclick="bleu7()"></button>
+            <button class="vert" id="vert7" onclick="vert7()"></button>
+            <button class="orange" id="orange7" onclick="orange7()"></button>
+            <button class="marron" id="marron7" onclick="marron7()"></button>
+            <button class="rouge" id="rouge7" onclick="rouge7()"></button>
+            <button class="cancel" id="cance7" onclick="cancel7()">ANNULER</button>
+            <button class="cancel-all" id="cancel-al7" onclick="cancelAll()">TOUT ANNULER</button>
+        </div>
+        <button id="note-close1" onclick="noteClose7()">✗</button>
+        <input placeholder="Titre" type="text" name="1" id="">
+        <textarea placeholder="Notes..." name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="note" id="note8">
+        <h2>✎8</h2>
+        <div id="edit8-menu" class="edit">
+            <button class="bleu" id="bleu8" onclick="bleu8()"></button>
+            <button class="vert" id="vert8" onclick="vert8()"></button>
+            <button class="orange" id="orange8" onclick="orange8()"></button>
+            <button class="marron" id="marron8" onclick="marron8()"></button>
+            <button class="rouge" id="rouge8" onclick="rouge8()"></button>
+            <button class="cancel" id="cancel8" onclick="cancel8()">ANNULER</button>
+            <button class="cancel-all" id="cancel-all8" onclick="cancelAll()">TOUT ANNULER</button>
+        </div>
+        <button id="note-close1" onclick="noteClose8()">✗</button>
+        <input placeholder="Titre" type="text" name="1" id="">
+        <textarea placeholder="Notes..." name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="note" id="note9">
+        <h2>✎9</h2>
+        <div id="edit9-menu" class="edit">
+            <button class="bleu" id="bleu9" onclick="bleu9()"></button>
+            <button class="vert" id="vert9" onclick="vert9()"></button>
+            <button class="orange" id="orange9" onclick="orange9()"></button>
+            <button class="marron" id="marron9" onclick="marron9()"></button>
+            <button class="rouge" id="rouge9" onclick="rouge9()"></button>
+            <button class="cancel" id="cancel9" onclick="cancel9()">ANNULER</button>
+            <button class="cancel-all" id="cancel-all9" onclick="cancelAll()">TOUT ANNULER</button>
+        </div>
+        <button id="note-close1" onclick="noteClose9()">✗</button>
+        <input placeholder="Titre" type="text" name="1" id="">
+        <textarea placeholder="Notes..." name="" id="" cols="30" rows="10"></textarea>
+    </div>
+    <div class="note" id="note10">
+        <h2>✎10</h2>
+        <div id="edit10-menu" class="edit">
+            <button class="bleu" id="bleu10" onclick="bleu10()"></button>
+            <button class="vert" id="vert10" onclick="vert10()"></button>
+            <button class="orange" id="orange10" onclick="orange10()"></button>
+            <button class="marron" id="marron10" onclick="marron10()"></button>
+            <button class="rouge" id="rouge10" onclick="rouge10()"></button>
+            <button class="cancel" id="cancel10" onclick="cancel10()">ANNULER</button>
+            <button class="cancel-all" id="cancel-all10" onclick="cancelAll()">TOUT ANNULER</button>
+        </div>
+        <button id="note-close1" onclick="noteClose10()">✗</button>
+        <input placeholder="Titre" type="text" name="1" id="">
+        <textarea placeholder="Notes..." name="" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <!--JEU NUMERO 4-------------------------------------------------------------------------------------------------->
+    <section class="back-img4" id="jeu-n4">
+        <button onclick="puzzleRetour()" id="puzzle-retour">↺</button>
+        <button onclick="puzzleExplain()" id="puzzle-explain"><b>?</b></button>
+        <section class="section-puzzle">
+            <article>
+                <div id="puzzle1">
+                    <!--DRAG CONTAINER-->
+                    <div class="content" ondrop="drop(event)" ondragover="dragover(event)">
+                        <div id="piste1" class="piste" draggable="true" ondragstart="drag1(event)" data-value="1">
+                            <div class="edit-div">
+                                <h2>#1</h2>
+                                <button id="edit1" onclick="edit1()">✎</button>
+                            </div>
+
+                            <div class="player">
+                                <button onclick="pause()" class="control"><img src="../medias/images/logos/pause.png"
+                                        alt=""></button>
+                                <button onclick="play()" class="control"><img src="../medias/images/logos/play.png"
+                                        alt=""></button>
+                                <button onclick="stop()" class="control"><img src="../medias/images/logos/stop.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content" ondrop="drop(event)" ondragover="dragover(event)">
+                        <div id="piste2" class="piste" draggable="true" ondragstart="drag2(event)" data-value="2">
+                            <div class="edit-div">
+                                <h2>#2</h2>
+                                <button id="edit2" onclick="edit2()">✎</button>
+                            </div>
+
+                            <div class="player">
+                                <button onclick="pause2()" class="control"><img src="../medias/images/logos/pause.png"
+                                        alt=""></button>
+                                <button onclick="play2()" class="control"><img src="../medias/images/logos/play.png"
+                                        alt=""></button>
+                                <button onclick="stop2()" class="control"><img src="../medias/images/logos/stop.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content" ondrop="drop(event)" ondragover="dragover(event)">
+                        <div id="piste3" class="piste" draggable="true" ondragstart="drag3(event)" data-value="3">
+                            <div class="edit-div">
+                                <h2>#3</h2>
+                                <button id="edit3" onclick="edit3()">✎</button>
+                            </div>
+
+                            <div class="player">
+                                <button onclick="pause3()" class="control"><img src="../medias/images/logos/pause.png"
+                                        alt=""></button>
+                                <button onclick="play3()" class="control"><img src="../medias/images/logos/play.png"
+                                        alt=""></button>
+                                <button onclick="stop3()" class="control"><img src="../medias/images/logos/stop.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content" ondrop="drop(event)" ondragover="dragover(event)">
+                        <div id="piste4" class="piste" draggable="true" ondragstart="drag4(event)" data-value="4">
+                            <div class="edit-div">
+                                <h2>#4</h2>
+                                <button id="edit4" onclick="edit4()">✎</button>
+                            </div>
+
+                            <div class="player">
+                                <button onclick="pause4()" class="control"><img src="../medias/images/logos/pause.png"
+                                        alt=""></button>
+                                <button onclick="play4()" class="control"><img src="../medias/images/logos/play.png"
+                                        alt=""></button>
+                                <button onclick="stop4()" class="control"><img src="../medias/images/logos/stop.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content" ondrop="drop(event)" ondragover="dragover(event)">
+                        <div id="piste5" class="piste" draggable="true" ondragstart="drag5(event)" data-value="5">
+                            <div class="edit-div">
+                                <h2>#5</h2>
+                                <button id="edit5" onclick="edit5()">✎</button>
+                            </div>
+
+                            <div class="player">
+                                <button onclick="pause5()" class="control"><img src="../medias/images/logos/pause.png"
+                                        alt=""></button>
+                                <button onclick="play5()" class="control"><img src="../medias/images/logos/play.png"
+                                        alt=""></button>
+                                <button onclick="stop5()" class="control"><img src="../medias/images/logos/stop.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" ondrop="drop(event)" ondragover="dragover(event)">
+                        <div id="piste6" class="piste" draggable="true" ondragstart="drag1(event)" data-value="1">
+                            <div class="edit-div">
+                                <h2>#6</h2>
+                                <button id="edit1" onclick="edit6()">✎</button>
+                            </div>
+
+                            <div class="player">
+                                <button onclick="pause6()" class="control"><img src="../medias/images/logos/pause.png"
+                                        alt=""></button>
+                                <button onclick="play6()" class="control"><img src="../medias/images/logos/play.png"
+                                        alt=""></button>
+                                <button onclick="stop6()" class="control"><img src="../medias/images/logos/stop.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content" ondrop="drop(event)" ondragover="dragover(event)">
+                        <div id="piste7" class="piste" draggable="true" ondragstart="drag2(event)" data-value="2">
+                            <div class="edit-div">
+                                <h2>#7</h2>
+                                <button id="edit2" onclick="edit7()">✎</button>
+                            </div>
+
+                            <div class="player">
+                                <button onclick="pause7()" class="control"><img src="../medias/images/logos/pause.png"
+                                        alt=""></button>
+                                <button onclick="play7()" class="control"><img src="../medias/images/logos/play.png"
+                                        alt=""></button>
+                                <button onclick="stop7()" class="control"><img src="../medias/images/logos/stop.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="puzzle1">
+                    <!--DRAG CONTAINER-->
+                    <div class="content" ondrop="drop(event)" ondragover="dragover(event)">
+                        <div id="piste8" class="piste" draggable="true" ondragstart="drag2(event)" data-value="3">
+                            <div class="edit-div">
+                                <h2>#8</h2>
+                                <button id="edit3" onclick="edit8()">✎</button>
+                            </div>
+
+                            <div class="player">
+                                <button onclick="pause8()" class="control"><img src="../medias/images/logos/pause.png"
+                                        alt=""></button>
+                                <button onclick="play8()" class="control"><img src="../medias/images/logos/play.png"
+                                        alt=""></button>
+                                <button onclick="stop8()" class="control"><img src="../medias/images/logos/stop.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content" ondrop="drop(event)" ondragover="dragover(event)">
+                        <div id="piste9" class="piste" draggable="true" ondragstart="drag2(event)" data-value="4">
+                            <div class="edit-div">
+                                <h2>#9</h2>
+                                <button id="edit4" onclick="edit9()">✎</button>
+                            </div>
+
+                            <div class="player">
+                                <button onclick="pause9()" class="control"><img src="../medias/images/logos/pause.png"
+                                        alt=""></button>
+                                <button onclick="play9()" class="control"><img src="../medias/images/logos/play.png"
+                                        alt=""></button>
+                                <button onclick="stop9()" class="control"><img src="../medias/images/logos/stop.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content" ondrop="drop(event)" ondragover="dragover(event)">
+                        <div id="piste10" class="piste" draggable="true" ondragstart="drag2(event)" data-value="5">
+                            <div class="edit-div">
+                                <h2>#10</h2>
+                                <button id="edit5" onclick="edit10()">✎</button>
+                            </div>
+
+                            <div class="player">
+                                <button onclick="pause10()" class="control"><img src="../medias/images/logos/pause.png"
+                                        alt=""></button>
+                                <button onclick="play10()" class="control"><img src="../medias/images/logos/play.png"
+                                        alt=""></button>
+                                <button onclick="stop10()" class="control"><img src="../medias/images/logos/stop.png"
+                                        alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--DROP CONTAINER-->
+                <div id="drop">
+                    <div id="container1" class="drop-container" ondrop="drop1(event)" ondragover="dragover(event)"
+                        name="1" data-value="1">
+                    </div>
+                    <div id="link1" class="link"></div>
+
+                    <div id="container2" class="drop-container" ondrop="drop2(event)" ondragover="dragover(event)"
+                        name="2" data-value="2">
+                    </div>
+                    <div id="link2" class="link"></div>
+
+                    <div id="container3" class="drop-container" ondrop="drop3(event)" ondragover="dragover(event)"
+                        name="3" data-value="3">
+                    </div>
+                    <div id="link3" class="link"></div>
+
+                    <div id="container4" class="drop-container" ondrop="drop4(event)" ondragover="dragover(event)"
+                        name="4" data-value="4">
+                    </div>
+                    <div id="link4" class="link"></div>
+
+                    <div id="container5" class="drop-container" ondrop="drop5(event)" ondragover="dragover(event)"
+                        name="5" data-value="5">
+                    </div>
+                    <div id="link5" class="link"></div>
+
+                    <div id="container6" class="drop-container" ondrop="drop6(event)" ondragover="dragover(event)"
+                        name="6" data-value="6">
+                    </div>
+                    <div id="link6" class="link"></div>
+
+                    <div id="container7" class="drop-container" ondrop="drop7(event)" ondragover="dragover(event)"
+                        name="7" data-value="7">
+                    </div>
+                    <div id="link7" class="link"></div>
+
+                    <div id="container8" class="drop-container" ondrop="drop8(event)" ondragover="dragover(event)"
+                        name="8" data-value="8">
+                    </div>
+                    <div id="link8" class="link"></div>
+
+                    <div id="container9" class="drop-container" ondrop="drop9(event)" ondragover="dragover(event)"
+                        name="9" data-value="9">
+                    </div>
+                    <div id="link9" class="link"></div>
+
+                    <div id="container10" class="drop-container" ondrop="drop(event)" ondragover="dragover(event)"
+                        name="10" data-value="10">
+                    </div>
+                </div>
+            </article>
+
+            <!--RESUME LA COMPOSITION-->
+            <div class="resume">
+                <div>
+                    <button onclick="pause()" class="control"><img src="../medias/images/logos/pause.png"
+                            alt=""></button>
+                    <button onclick="play()" class="control"><img src="../medias/images/logos/play.png" alt=""></button>
+                    <button onclick="stop()" class="control"><img src="../medias/images/logos/stop.png" alt=""></button>
+                </div>
+                <button onclick="validation()" class="valid" id="btn-valid">VALIDER</button>
+            </div>
+
+            <!--MESSAGE REUSSITE N°1----------------------------------------------------------------------------------------------------------------->
+
+        </section>
+
+
+        <!--FILTRE JEU / BULLE VALIDATION-->
+    </section>
+    <div id="filtrePuzzle"></div>
+    <div id="bulle-jeu-ok" class="bulle-victoire">
+        <p>Chiffre n°1 :
+            <br>
+            <br>
+            <h3 id="puzzle1correct">2</h3>
+        </p>
+    </div>
+
+    <div id="bulle-jeu-ok1" class="bulle-victoire">
+        <p>Chiffre n°2 :
+            <br>
+            <br>
+            <h3 id="puzzle1correct">7</h3>
+        </p>
+    </div>
+
+    <div id="bulle-jeu-ok2" class="bulle-victoire">
+        <p>Chiffre n°3 :
+            <br>
+            <br>
+            <h3 id="puzzle1correct">0</h3>
+        </p>
+    </div>
+
+    <div id="bulle-jeu-ok3" class="bulle-victoire">
+        <p>Chiffre n°4 :
+            <br>
+            <br>
+            <h3 id="puzzle1correct">4</h3>
+        </p>
+    </div>
+
+    <div class="boite-indice">
+
+    </div>
+    <div class="poche-indice">Poche d'indices</div>
+
+
+    <!--SCENE 3D-->
+    <div id="panorama"></div>
+
+    <script src="../script/salle/script1-360.js"></script>
+
+
+
+
+    <!--BULLES EXPLICATIVES-->
+    <div id="exp1">
+        <button class="btnpasser" onclick="passerInfo()">PASSER</button>
+        <section>
+            <h1>BIENVENUE</h1>
+            <article>
+                <br>
+                <p>Bievenue dans une session de formation AnthroPi. <br>
+                    Vous découvrirez différents ateliers tout au long de la session.
+                    <br><br>
+                    Avant de débuter, nous allons vous expliquer comment fonctionne ce serious game.
+                </p>
+            </article>
+        </section>
+
+        <button onclick="toExp2()" class="btninfo">SUIVANT</button>
+    </div>
+
+    <div id="exp2">
+        <button class="btnpasser" onclick="passerInfo()">PASSER</button>
+        <section>
+            <article>
+                <h2>Les boutons bleu</h2>
+                <img src="../medias/images/btn-bleu.png" alt="">
+                <p>
+                    L'objectif de ce serious game est de s'échapper en parcourant les salles et en terminant les
+                    ateliers aux
+                    nombres de 4 par salle.
+                </p>
+
+            </article>
+            <article>
+                <h2>Les boutons jaune</h2>
+                <img src="../medias/images/btn-jaune.png" alt="">
+                <p>
+                    À chaque atelier vous obtiendrez un chiffres, ces chiffres formerons un code. Les indices seront
+                    ranger dans la
+                    poche à indices afin de pouvoir les utiliser lorsque vous entrerez le code pour sortir de la salle.
+                </p>
+            </article>
+        </section>
+
+        <div>
+            <button onclick="backExp1()" class="btninfo">PRÉCÉDENT</button>
+            <button onclick="toExp3()" class="btninfo">SUIVANT</button>
+        </div>
+    </div>
+
+    <div id="exp3">
+        <button class="btnpasser" onclick="passerInfo()">PASSER</button>
+        <section>
+            <div>
+                <p>Le bouton de gauche vous donnera accès au listes des salles débolqué. Les salles non débloqué ne donc
+                    pas cliquables.</p>
+                <p>Le bouton du milieu affichera un résumer de l'histoire du décor.</p>
+                <p>
+                    Le bouton de droite vous redirigera vers ces explications, en cas de besoin, n'hésiter pas à
+                    l'utiliser.
+                </p>
+            </div>
+            <img src="../medias/images/menu.png" alt="">
+        </section>
+
+        <div>
+            <button onclick="backExp2()" class="btninfo">PRÉCÉDENT</button>
+            <button onclick="toExp4()" class="btninfo">COMMENCER</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

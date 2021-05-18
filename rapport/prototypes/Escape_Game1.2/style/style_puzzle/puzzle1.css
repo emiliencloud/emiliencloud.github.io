@@ -1,0 +1,509 @@
+.back-img4 {
+    margin: 0;
+    background: #101010c9;
+    background-size: cover;
+    background-position: center;
+
+    position: absolute;
+    top: -110vh;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+
+    /*z-index: 200;*/
+    opacity: 0;
+
+    transition: 0.5s;
+}
+
+/*PUZZLE*/
+.section-puzzle {
+    position: absolute;
+    top: 0vh;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem 0 0 0;
+}
+
+/*PISTES CONTAINER*/
+#puzzle1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10vw 0 10vw;
+}
+
+/*PISTES > CONTROL*/
+.control {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.control:hover {
+    opacity: 0.5;
+}
+
+.control:focus {
+    opacity: 0.25;
+    transform: scale(0.9);
+}
+
+.control:nth-of-type(3):focus {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.control>img {
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0;
+    margin: 0.25rem 0 0.25rem 0;
+}
+
+.piste {
+    background-color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 6rem;
+    height: 6rem;
+
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.piste>img {
+    width: 12rem;
+    position: absolute;
+}
+
+.edit-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.edit-div>h2 {
+    margin: 0;
+    color: white;
+}
+
+.edit-div>button {
+    margin: 0;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    padding: 0;
+}
+
+.edit-div>button:hover {
+    opacity: 0.5;
+}
+
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.piste:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.content {
+    border-radius: 15px;
+    border: 0.2rem solid white;
+    margin: 1rem 1.5rem 0 1.5rem;
+    width: 7rem;
+    height: 7rem;
+}
+
+/*PISTES DROP CONTAINER*/
+#drop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    color: #50B8FF;
+
+    width: 100%;
+
+    margin: 5rem 0 0 0;
+}
+
+.link {
+    width: 2rem;
+    height: 1rem;
+    background: #50B8FF;
+    border-radius: 10px;
+}
+
+#container2,
+#container3,
+#container4,
+#container5,
+#container6,
+#container7,
+#container8,
+#container9,
+#container10 {
+    display: none;
+}
+
+#link1,
+#link2,
+#link3,
+#link4,
+#link5,
+#link6,
+#link7,
+#link8,
+#link9 {
+    display: none;
+}
+
+.drop-container {
+    width: 7rem;
+    height: 7rem;
+
+    border-radius: 15px;
+    border: #50B8FF 0.2rem solid;
+}
+
+/*RESUME*/
+.resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 2rem 0 5rem 0;
+}
+
+.resume>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume>div>button>img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.resume>div>button {
+    margin: 0rem 2rem 0rem 2rem;
+}
+
+.resume>h2 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 1rem;
+}
+
+/*VALIDER COMPOSITION*/
+.valid {
+    border: dashed 0.1rem;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background: none;
+    width: 10vw;
+    color: white;
+    align-self: center;
+
+    margin: 1rem 0 0 0;
+    display: none;
+}
+
+.valid:hover {
+    background: rgb(255, 255, 255);
+    border: dashed 0.1rem;
+    color: black;
+}
+
+/*EDIT COMPOSITION*/
+.edit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 50%;
+    z-index: 255;
+    margin: 0 0 1rem 0;
+}
+
+.edit>button {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.edit>button:hover {
+    opacity: 0.75;
+}
+
+.bleu {
+    background: rgb(80, 185, 255);
+}
+
+.vert {
+    background: rgb(80, 255, 118);
+}
+
+.orange {
+    background: rgb(255, 150, 80);
+}
+
+.marron {
+    background: rgb(68, 44, 21);
+}
+
+.rouge {
+    background: rgb(221, 40, 40);
+}
+
+.cancel {
+    border: solid white 0.1rem !important;
+    border-radius: 0.5rem !important;
+    font-size: 1rem;
+    background: none;
+    width: 10vw !important;
+    color: white;
+    align-self: center;
+}
+
+.cancel-all {
+    border: solid white 0.1rem !important;
+    border-radius: 0.5rem !important;
+    font-size: 1rem;
+    width: 10vw !important;
+    background: none;
+    color: white;
+    align-self: center;
+    margin: 0;
+}
+
+/*NOTES*/
+.note {
+    position: absolute;
+    bottom: -50vh;
+    left: 0;
+    right: 0;
+    padding: 2rem 2rem 2rem 2rem;
+    background: rgb(0, 0, 0);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+
+    transition: 0.25s;
+
+    z-index: 250;
+}
+
+.note>h2 {
+    position: absolute;
+    left: 2vw;
+    right: 2vh;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.note>textarea {
+    height: 10vh;
+    background: rgb(30, 30, 30);
+    border: none;
+    border-radius: 10px;
+
+    width: 50%;
+
+    color: white;
+
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+    outline-style: none;
+    resize: none;
+    font-size: 1rem;
+}
+
+.note>label {
+    font-weight: bolder;
+}
+
+.note>input {
+    border: none;
+    border-radius: 10px;
+    background: rgb(30, 30, 30);
+    width: 50%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+    outline-style: none;
+
+    font-size: 1rem;
+
+    color: white;
+}
+
+#note-close1 {
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+
+    transition: .1s;
+}
+
+#note-close1:hover {
+    transform: scale(1.1);
+    color: #50B8FF;
+}
+
+/*BOUTON EXPLAIN - RETOUR*/
+#puzzle-retour {
+    border-radius: 50%;
+    background-color: #50B8FF;
+    border: none;
+
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+
+    position: absolute;
+    top: 5vh;
+    left: 3vw;
+
+    z-index: 220 !important;
+}
+
+#puzzle-retour:hover {
+    background-color: #50b8ff80;
+}
+
+#puzzle-explain {
+    border-radius: 50%;
+    background-color: #50B8FF;
+    border: none;
+
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+
+    position: absolute;
+    top: 5vh;
+    right: 3vw;
+
+    z-index: 200;
+}
+
+#puzzle-explain:hover {
+    background-color: #50B8FF80;
+}
+
+/*BULLES VICTOIRES*/
+#bulle-jeu-ok:hover{
+    opacity: 1 ;
+    z-index: 350;
+    bottom : 2vh !important;
+}
+
+#bulle-jeu-ok {
+    position: absolute;
+
+    background-image: url(../../medias/images/feuille.jpg);
+    background-size: cover;
+
+    border-radius: 5px;
+
+    padding: 2rem;
+    margin: 0;
+    bottom: -50vh ;
+    right: 2vw;
+    height: 15vh;
+    width: 5vw;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 0.25s;
+    opacity: 1;
+
+    z-index: 300;
+
+    border: solid 0.2rem #000000;
+}
+
+
+.bulle-victoire>p {
+    color: black;
+    margin: 0;
+}
+
+.bulle-victoire>h3 {
+    color: #50B8FF;
+    margin: 0;
+}
+
+/*FILTRE PUZZLE*/
+#filtrePuzzle {
+    width: 30vw;
+    height: 10vh;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+
+    z-index: 200;
+
+    position: absolute;
+    top: -110vh;
+    left: 0;
+}
+
+#indice-close {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    color: black;
+
+    transition: .1s;
+
+    z-index: 50;
+}
+
+#indice-close:hover {
+    transform: scale(1.1);
+    color: #50B8FF ;
+}
