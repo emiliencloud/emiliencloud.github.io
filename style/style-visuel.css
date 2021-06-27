@@ -1,0 +1,145 @@
+@media screen and (min-width: 767px) {
+
+    .audiovisuels {
+        position: relative;
+
+        top: 140vh;
+        width: 100%;
+
+        z-index: 10;
+
+        padding-top: 7rem;
+    }
+
+    .audio1 {
+        margin: 1rem 4rem 1rem 4rem;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .audio-content1 {
+        background: url(../medias/images/3D/animdl.gif);
+        background-position: center;
+        background-size: cover;
+        height: 20rem;
+        width: 100%;
+
+        border-radius: 20px;
+    }
+
+    .audio-content2 {
+        width: 100%;
+    }
+
+    .audio-content2>h2 {
+        text-align: right;
+        font-family: "bold";
+        font-size: 3rem;
+        color: rgb(139, 139, 139);
+        margin: 0;
+        padding: 0rem 0 0 0;
+
+        justify-self: end;
+        align-self: flex-end;
+    }
+
+    .audio-content2>h2>span {
+        color: white;
+    }
+
+    .audio2 {
+        margin: 2rem 4rem 1rem 4rem;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    iframe {
+        height: 15rem;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    iframe:nth-of-type(2) {
+        width: 90%;
+        align-self: center;
+        justify-self: center;
+    }
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    .audiovisuels {
+        position: relative;
+
+        top: 120vh;
+        width: 100%;
+
+        z-index: 10;
+
+        padding-top: 7rem;
+    }
+
+    .audio1 {
+        margin: 1rem 1rem 1rem 1rem;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .audio-content1 {
+        background: url(../medias/images/3D/animdl.gif);
+        background-position: center;
+        background-size: cover;
+        height: 15rem;
+        width: 90vw;
+
+        border-radius: 20px;
+    }
+
+    .audio-content2 {
+        width: 100%;
+    }
+
+    .audio-content2>h2 {
+        text-align: center;
+        font-family: "bold";
+        font-size: 1.5rem;
+        color: rgb(139, 139, 139);
+        margin: 0;
+        padding: 1rem 0 1rem 0;
+
+        justify-self: end;
+        align-self: flex-end;
+    }
+
+    .audio-content2>h2>span {
+        color: white;
+    }
+
+    .audio2 {
+        margin: 1rem 1rem 1rem 1rem;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    iframe {
+        height: 15rem;
+        width: 100%;
+        border-radius: 20px;
+        margin: 0 0 1rem 0;
+    }
+
+    iframe:nth-of-type(2) {
+        display: none;
+    }
+}

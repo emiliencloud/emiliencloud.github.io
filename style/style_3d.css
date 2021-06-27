@@ -1,0 +1,377 @@
+@media screen and (min-width: 767px) {
+
+    /*************3d GRILLE 0*************************/
+    .grille0 {
+        margin: 1rem 0 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grille0>h2 {
+        text-align: center;
+        font-family: "bold";
+        font-size: 3rem;
+        color: rgb(139, 139, 139);
+
+        margin: 0;
+        padding: 2rem 0 0 0;
+    }
+
+    .grille0>p {
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+        font-family: "regular";
+        text-align: center;
+        width: 55%;
+    }
+
+    .grille0>p>span {
+        font-family: "bold";
+        color: white;
+    }
+
+    .grille0>h2>span {
+        font-family: "bold";
+        color: white;
+    }
+
+    /*************3d GRILLE 1*************************/
+    .proj3d {
+        padding-top: 8rem;
+        position: relative;
+        top: 120vh;
+        left: 4.5%;
+
+        width: 91%;
+    }
+
+    .proj3d>h1 {
+        font-family: "bold";
+        color: white;
+    }
+
+    .grille1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #dvisu>h1 {
+        margin: 0;
+        padding: 1em;
+        font-size: 2rem;
+        font-family: "bold";
+        color: #bbffe5;
+    }
+
+    #dvisu>img {
+        width: 27em;
+        margin: 0 0 0 1em;
+    }
+
+    #dvisu {
+        border-radius: 20px;
+        background: linear-gradient(to top right, #beec82, #23bbba);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        overflow-y: auto;
+    }
+
+
+    #dvisu2>h1 {
+        margin: 0;
+        padding: 1em;
+        font-size: 2rem;
+        font-family: "bold";
+        color: #b5ccff;
+        opacity: 0.5;
+    }
+
+    #dvisu2>img {
+        width: 24em;
+        margin: 0 0 3em 0.5em;
+    }
+
+    #dvisu2 {
+        border-radius: 20px;
+        background: linear-gradient(to bottom left, #00123a, #023299, #f3f09d);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        overflow-y: auto;
+        width: 90%;
+        justify-self: center;
+    }
+
+
+    #dvisu3>h1 {
+        margin: 0;
+        padding: 1em;
+        font-size: 2rem;
+        font-family: "bold";
+        color: #f5d291;
+    }
+
+    #dvisu3>img {
+        width: 27em;
+        margin: 0 0 2em 1em;
+    }
+
+    #dvisu3 {
+        border-radius: 20px;
+        background: linear-gradient(to bottom left, #2e1c12, #b09054);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        overflow-y: auto;
+    }
+
+
+    /*********************3d GRILLE2***********************/
+    .grille2 {
+        margin: 2rem 0 0 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #dvisu4>h1 {
+        margin: 0;
+        padding: 1em;
+        font-size: 2rem;
+        font-family: "bold";
+        color: #e0c499;
+    }
+
+    #dvisu4 {
+        border-radius: 20px;
+        background: url(../medias/images/3D/DS_render1.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        overflow-y: auto;
+        width: 95%;
+        height: 25rem;
+    }
+
+    #dvisu5>h1 {
+        margin: 0;
+        padding: 1em;
+        font-size: 2rem;
+        font-family: "bold";
+        color: #f0b99a;
+    }
+
+    #dvisu5 {
+        border-radius: 20px;
+        background: url(../medias/images/3D/super_charger_insta.png);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        overflow-y: auto;
+        width: 100%;
+        height: 25rem;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+
+    /*************3d GRILLE 1*************************/
+    .proj3d {
+        padding-top: 8rem;
+        position: relative;
+        top: 110vh;
+        left: 5vw;
+
+        width: 90vw;
+    }
+
+    .proj3d>h1 {
+        font-family: "bold";
+        color: white;
+    }
+
+    .grille1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    #dvisu>h1 {
+        margin: 0;
+        padding: 0.5em;
+        font-size: 2rem;
+        font-family: "bold";
+        color: #bbffe5;
+    }
+
+    #dvisu>img {
+        width: 19em;
+        margin: 0 0 0 0.5em;
+    }
+
+    #dvisu {
+        border-radius: 20px;
+        background: linear-gradient(to top right, #beec82, #23bbba);
+        display: flex;
+        flex-direction: column;
+
+        overflow-y: auto;
+    }
+
+
+    #dvisu2>h1 {
+        margin: 0;
+        padding: 0.5em;
+        font-size: 2rem;
+        font-family: "bold";
+        color: #b5ccff;
+    }
+
+    #dvisu2>img {
+        width: 19em;
+        margin: 0 0 0 0.5em;
+    }
+
+    #dvisu2 {
+        border-radius: 20px;
+        background: linear-gradient(to bottom left, #00123a, #023299, #f3f09d);
+        display: flex;
+        flex-direction: column;
+
+        overflow-y: auto;
+
+        margin: 1em 0 1em 0;
+    }
+
+    #dvisu3>h1 {
+        margin: 0;
+        padding: 0.5em;
+        font-size: 2rem;
+        font-family: "bold";
+        color: #f5d291;
+    }
+
+    #dvisu3>img {
+        width: 19em;
+        margin: 0 0 0 0.5em;
+    }
+
+    #dvisu3 {
+        border-radius: 20px;
+        background: linear-gradient(to bottom left, #2e1c12, #b09054);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        overflow-y: auto;
+    }
+
+
+    
+    /*********************3d GRILLE2***********************/
+    .grille2 {
+        margin: 2rem 0 0 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #dvisu4>h1 {
+        margin: 0;
+        padding: 0.5em;
+        font-size: 2rem;
+        font-family: "bold";
+        color: #e0c499;
+    }
+
+    #dvisu4 {
+        border-radius: 20px;
+        background: url(../medias/images/3D/DS_render1.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        overflow-y: auto;
+        width: 90vw;
+        height: 15rem;
+    }
+
+    #dvisu5>h1 {
+        margin: 0;
+        padding: 0.5em;
+        font-size: 2rem;
+        font-family: "bold";
+        color: #f0b99a;
+    }
+
+    #dvisu5 {
+        border-radius: 20px;
+        background: url(../medias/images/3D/super_charger_insta.png);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        background-position: center;
+
+        justify-content: space-between;
+
+        overflow-y: auto;
+        width: 90vw;
+        height: 15rem;
+    }
+
+
+    /*************3d GRILLE 0*************************/
+    .grille0 {
+        margin: 1rem 0 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grille0>h2 {
+        text-align: center;
+        font-family: "bold";
+        font-size: 2rem;
+        color: rgb(139, 139, 139);
+
+        margin: 0;
+        padding: 2rem 0 0 0;
+    }
+
+    .grille0>p {
+        color: rgb(255, 255, 255);
+        font-size: 1.25rem;
+        font-family: "regular";
+        text-align: center;
+        width: 90vw;
+    }
+
+    .grille0>p>span {
+        font-family: "bold";
+        color: white;
+    }
+
+    .grille0>h2>span {
+        font-family: "bold";
+        color: white;
+    }
+
+}
