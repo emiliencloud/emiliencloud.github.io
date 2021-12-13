@@ -1,0 +1,312 @@
+@media screen and (min-width: 767px) {
+
+    .graphisme {
+        margin: 0em 12em 10em 12em;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /*  WaterPlace*/
+
+    .waterplace-graph {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        height: 70vh;
+    }
+
+    .waterplace-container>h4 {
+        color: #00aecc;
+    }
+
+    .waterplace-container {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0 5em 0 0;
+    }
+
+    .waterplace-container>img {
+        width: 80%;
+
+        justify-self: center;
+        align-self: center;
+    }
+
+    .waterplace-container>a {
+        align-self: flex-end;
+        padding: .25em .75em;
+        color: #00aecc;
+    }
+
+    .waterplace-container>a:hover {
+        color: white;
+    }
+
+    .waterplace-images {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .waterplace-images>img {
+        width: 18em;
+    }
+
+
+    /*  Origami*/
+
+    .origami {
+        height: 70vh;
+
+        margin: 12em 0 0 0;
+    }
+
+    .origami-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .origami-container>h4 {
+        color: #bba78c;
+    }
+
+    .origami-container>a {
+        align-self: flex-end;
+        padding: .25em .75em;
+        color: #bba78c;
+    }
+
+    .origami-container>a:hover {
+        color: white;
+    }
+
+    .origami-images {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .origami-images>img {
+        width: 45%;
+    }
+
+    .vrac {
+        height: 70vh;
+
+        margin: 13em 0 0 0;
+    }
+
+    .vrac-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .vrac-container>img {
+        width: 100%;
+        border-radius: 2em;
+
+        margin: 2em 0 0 0;
+    }
+
+    .vrac-container>p {
+        padding: 3em;
+        justify-self: center;
+        align-self: center;
+    }
+
+    /* Duquoc*/
+
+    .duquoc {
+        height: 70vh;
+
+        margin: 17em 0 0 0;
+    }
+
+    .duquoc-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .duquoc-content>img {
+        width: 100%;
+    }
+
+    .duquoc-p {
+        margin: 0 0 0 5em;
+        text-align: justify;
+    }
+
+    .duquoc-p>h4 {
+        color: var(--main-color);
+        margin: 0 0 2em 0;
+    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .graphisme {
+        margin: 0em 1em 10em 1em;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .graphisme>h3 {
+        margin-top: 3em;
+
+        text-align: center;
+        font-size: 2em;
+    }
+
+    /*  WaterPlace*/
+
+    .waterplace-graph {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .waterplace-container>h4 {
+        color: #00aecc;
+        text-align: center;
+    }
+
+    .waterplace-container {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0 0em 0 0;
+    }
+
+    .waterplace-container>img {
+        width: 80%;
+
+        justify-self: center;
+        align-self: center;
+    }
+
+    .waterplace-container>a {
+        align-self: center;
+        padding: .25em .75em;
+        color: #00aecc;
+
+        margin: 1em;
+    }
+
+    .waterplace-container>a:hover {
+        color: white;
+    }
+
+    .waterplace-images {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .waterplace-images>img {
+        margin: 2em 1em;
+        width: 100%;
+    }
+
+
+    /*  Origami*/
+
+    .origami {
+        margin: 5em 0 0 0;
+    }
+
+    .origami-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .origami-container>h4 {
+        color: #bba78c;
+        text-align: center;
+    }
+
+    .origami-container>a {
+        align-self: center;
+        padding: .25em .75em;
+        color: #bba78c;
+
+        margin: 1em 0 2em 0;
+    }
+
+    .origami-container>a:hover {
+        color: white;
+    }
+
+    .origami-images {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .origami-images>img {
+        width: 100%;
+
+        margin: 1em 0em;
+    }
+
+    /*VRAC*/
+
+    .vrac {
+        margin: 7em 0 0 0;
+    }
+    .vrac>h4 {
+        text-align: center;
+    }
+
+    .vrac-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .vrac-container>img {
+        width: 100%;
+        border-radius: 2em;
+
+        margin: 2em 0 0 0;
+    }
+
+    .vrac-container>p {
+        padding: 1.5em;
+        justify-self: center;
+        align-self: center;
+    }
+
+    /* Duquoc*/
+
+    .duquoc {
+        margin: 7em 0 0 0;
+    }
+
+    .duquoc-content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .duquoc-content>img {
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    .duquoc-p {
+        margin: 0 0 0 0em;
+        text-align: justify;
+    }
+
+    .duquoc-p>h4 {
+        color: var(--main-color);
+        margin: 0 0 1em 0;
+
+        text-align: center;
+    }
+
+}
