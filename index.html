@@ -5,288 +5,379 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/style_3d.css">
-    <link rel="stylesheet" href="style/style_graph.css">
-    <link rel="stylesheet" href="style/style-visuel.css">
-    <link rel="stylesheet" href="style/style_a_propos.css">
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/graphisme.css">
+    <link rel="stylesheet" href="style/webdesign.css">
+    <link rel="stylesheet" href="style/3d.css">
+    <link rel="stylesheet" href="style/progress-nav.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="medias/fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="medias/fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="medias/fav/favicon-16x16.png">
-    <link rel="manifest" href="medias/fav/site.webmanifest">
-    <link rel="mask-icon" href="medias/fav/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <title>Portfolio - Emilien COULAND</title>
+    <title>Portfolio | Emilien Couland</title>
 </head>
 
 <body>
+    <!-- Load de la librairie jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Load de font awesome-->
+    <script src="https://kit.fontawesome.com/9099ad696d.js" crossorigin="anonymous"></script>
 
-    <script src="script/script.js"></script>
 
-    <img id="back-img" src="medias/background.jpg" alt="">
+    <script src="script/cursor.js"></script>
+    <script src="script/scroll-progress.js"></script>
+    <script src="script/parallax.js"></script>
+
     <header>
-        <a href="#top">
-            <p>Emilien.C</p>
+        <a href="#top" class="title">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 516 429.76" class="logo">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: #f9f9f9;
+                        }
+
+                        .cls-2 {
+                            fill: #fe0b45;
+                        }
+                    </style>
+                </defs>
+                <title>dzaFichier 3</title>
+                <g id="Calque_2" data-name="Calque 2">
+                    <g id="page-3">
+                        <path class="cls-1"
+                            d="M379.81,101.2l-13.38,13.37,13.38-13.37a159.62,159.62,0,0,0-53.47-32.1,156.63,156.63,0,0,0-60.5-8.93,153.54,153.54,0,0,0-58.12,14.67A150.46,150.46,0,0,0,160.67,110,147.35,147.35,0,0,1,210.1,80.58a144.25,144.25,0,0,1,55.74-8A140.84,140.84,0,0,1,319.2,86.33a138,138,0,0,1,43,32.45h0a135.45,135.45,0,0,1,36.14,64.7c8.11.28,16.69.62,25.66,1A160.26,160.26,0,0,0,379.81,101.2Z" />
+                        <path class="cls-1"
+                            d="M379.81,328.5l-13.38-13.37,13.38,13.37a160,160,0,0,1-53.47,32.1,156.63,156.63,0,0,1-60.5,8.93,153.54,153.54,0,0,1-58.12-14.67,150.46,150.46,0,0,1-47.05-35.15,147.35,147.35,0,0,0,49.43,29.41,144.05,144.05,0,0,0,55.74,8,140.83,140.83,0,0,0,53.36-13.72,138,138,0,0,0,43-32.45h0a135.37,135.37,0,0,0,36.14-64.69c8.11-.29,16.69-.62,25.66-1A160.26,160.26,0,0,1,379.81,328.5Z" />
+                        <path class="cls-1"
+                            d="M261.24,417.19a200.51,200.51,0,0,1-76.11-18.25,197.64,197.64,0,0,1-62.29-45.34h0a194.77,194.77,0,0,1-55-109.18c-8.3-.44-16.82-.92-25.48-1.48a219,219,0,0,0,63,128.24h0a219.45,219.45,0,0,0,72.74,45,216.2,216.2,0,0,0,83.24,13.45,213.15,213.15,0,0,0,80.86-19.19,210.13,210.13,0,0,0,66.32-48,207,207,0,0,1-68.7,42.3A203.83,203.83,0,0,1,261.24,417.19Z" />
+                        <path class="cls-1"
+                            d="M261.24,12.58a200.69,200.69,0,0,0-76.11,18.24,197.67,197.67,0,0,0-62.29,45.35h0a194.72,194.72,0,0,0-55,109.17c-8.3.44-16.82.93-25.48,1.49a219,219,0,0,1,63-128.25h0a219.45,219.45,0,0,1,72.74-45A216.2,216.2,0,0,1,261.24.14a213,213,0,0,1,80.86,19.2,209.82,209.82,0,0,1,66.32,48,206.87,206.87,0,0,0-68.7-42.3A203.64,203.64,0,0,0,261.24,12.58Z" />
+                        <path class="cls-2"
+                            d="M516,214.26v1.56c-29.73,2.7-59.46,4.5-89.18,5.82q-12.46.56-24.95,1-7.42.28-14.87.52-13.41.44-26.82.77c-7.13.17-14.25.34-21.38.47q-8,.17-16.06.29-32.14.5-64.27.49H258q-64.51,0-129-2c-21.11-.71-42.22-1.56-63.33-2.7Q53.17,219.8,40.63,219,20.32,217.63,0,215.82H0v-1.56H0q20.31-1.84,40.62-3.16,12.52-.82,25.07-1.49c21.1-1.15,42.2-2,63.31-2.7q64.49-2.07,129-2h.47q49.95,0,99.89,1.21,14.33.35,28.63.8l14.86.52q12.48.47,24.94,1C456.53,209.77,486.26,211.57,516,214.26Z" />
+                        <path class="cls-1" d="M0,214.26v1.56H0v-1.56Z" />
+                    </g>
+                </g>
+            </svg>
         </a>
-        <nav>
-            <a href="#proj3d">Projets 3D</a>
-            <a href="#graphismes">Graphismes</a>
-            <a href="#audiov">Audiovisuel</a>
-            <a href="#propos">À propos</a>
+        <nav id="navbar">
+            <a href="#webdesign" onclick="remove()"><i class="fas fa-code"></i> Webdesign / Dev</a>
+            <a href="#section-graphisme" onclick="remove()"><i class="fas fa-pen-nib"></i> Graphisme</a>
+            <a href="#section-trois" onclick="remove()"><i class="fas fa-cube"></i> Projets 3D</a>
+            <a href="#section-about" onclick="remove()"><i class="fas fa-address-card"></i> À propos</a>
         </nav>
+
+        <div class="burger">
+            <div for="menu-burger" id="menu-burger" onclick="activeMenu()" class="label">
+                <div class="trait" id="trait1"></div>
+                <div class="trait" id="trait2"></div>
+            </div>
+        </div>
     </header>
 
-    <section id="menu">
-        <article id="case1" class="case1">
-            <div class="contenu">
-                <h2>Mes Projets 3D</h2>
-                <p>
-                    De la modélisation à l'animation, mes projets 3D sont réalisés sous Blender.
-                    C'est ici que vous découvrirez le résultat de ma formation en autodidacte en 3D.
-                </p>
+    <div id="progress" class="progress">
+        <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 516 429.76" class="progress-logo">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: #f9f9f9;
+                        }
 
-                <div class="exemple1" id="exempleun">
-                    <img src="medias/mockup/japan-scene.png" alt="">
-                    <div id="ex-content1">
-                        <h3>Scène Japonisante</h3>
-                        <br>
-                        • Rendu : Eevee,
-                        <br>
-                        • Modifier : Displate, Bevel,
-                        <br>
-                        • Éclairage : 4 sources.
-                        <br>
-                    </div>
-                </div>
-            </div>
+                        .cls-2 {
+                            fill: #fe0b45;
+                        }
+                    </style>
+                </defs>
+                <title>dzaFichier 3</title>
+                <g id="Calque_2" data-name="Calque 2">
+                    <g id="page-3">
+                        <path class="cls-1"
+                            d="M379.81,101.2l-13.38,13.37,13.38-13.37a159.62,159.62,0,0,0-53.47-32.1,156.63,156.63,0,0,0-60.5-8.93,153.54,153.54,0,0,0-58.12,14.67A150.46,150.46,0,0,0,160.67,110,147.35,147.35,0,0,1,210.1,80.58a144.25,144.25,0,0,1,55.74-8A140.84,140.84,0,0,1,319.2,86.33a138,138,0,0,1,43,32.45h0a135.45,135.45,0,0,1,36.14,64.7c8.11.28,16.69.62,25.66,1A160.26,160.26,0,0,0,379.81,101.2Z" />
+                        <path class="cls-1"
+                            d="M379.81,328.5l-13.38-13.37,13.38,13.37a160,160,0,0,1-53.47,32.1,156.63,156.63,0,0,1-60.5,8.93,153.54,153.54,0,0,1-58.12-14.67,150.46,150.46,0,0,1-47.05-35.15,147.35,147.35,0,0,0,49.43,29.41,144.05,144.05,0,0,0,55.74,8,140.83,140.83,0,0,0,53.36-13.72,138,138,0,0,0,43-32.45h0a135.37,135.37,0,0,0,36.14-64.69c8.11-.29,16.69-.62,25.66-1A160.26,160.26,0,0,1,379.81,328.5Z" />
+                        <path class="cls-1"
+                            d="M261.24,417.19a200.51,200.51,0,0,1-76.11-18.25,197.64,197.64,0,0,1-62.29-45.34h0a194.77,194.77,0,0,1-55-109.18c-8.3-.44-16.82-.92-25.48-1.48a219,219,0,0,0,63,128.24h0a219.45,219.45,0,0,0,72.74,45,216.2,216.2,0,0,0,83.24,13.45,213.15,213.15,0,0,0,80.86-19.19,210.13,210.13,0,0,0,66.32-48,207,207,0,0,1-68.7,42.3A203.83,203.83,0,0,1,261.24,417.19Z" />
+                        <path class="cls-1"
+                            d="M261.24,12.58a200.69,200.69,0,0,0-76.11,18.24,197.67,197.67,0,0,0-62.29,45.35h0a194.72,194.72,0,0,0-55,109.17c-8.3.44-16.82.93-25.48,1.49a219,219,0,0,1,63-128.25h0a219.45,219.45,0,0,1,72.74-45A216.2,216.2,0,0,1,261.24.14a213,213,0,0,1,80.86,19.2,209.82,209.82,0,0,1,66.32,48,206.87,206.87,0,0,0-68.7-42.3A203.64,203.64,0,0,0,261.24,12.58Z" />
+                        <path class="cls-2"
+                            d="M516,214.26v1.56c-29.73,2.7-59.46,4.5-89.18,5.82q-12.46.56-24.95,1-7.42.28-14.87.52-13.41.44-26.82.77c-7.13.17-14.25.34-21.38.47q-8,.17-16.06.29-32.14.5-64.27.49H258q-64.51,0-129-2c-21.11-.71-42.22-1.56-63.33-2.7Q53.17,219.8,40.63,219,20.32,217.63,0,215.82H0v-1.56H0q20.31-1.84,40.62-3.16,12.52-.82,25.07-1.49c21.1-1.15,42.2-2,63.31-2.7q64.49-2.07,129-2h.47q49.95,0,99.89,1.21,14.33.35,28.63.8l14.86.52q12.48.47,24.94,1C456.53,209.77,486.26,211.57,516,214.26Z" />
+                        <path class="cls-1" d="M0,214.26v1.56H0v-1.56Z" />
+                    </g>
+                </g>
+            </svg>
+        </a>
+        <div><i id="design" class="fas fa-code"></i></div>
+        <div><i id="graphisme" class="fas fa-pen-nib"></i></div>
+        <div><i id="troisd" class="fas fa-cube"></i></div>
+        <div><i id="about" class="fas fa-address-card"></i></div>
+    </div>
 
-            <div class="buttons">
-                <a href="#proj3d" class="button" id="all1">Tout voir</a>
-                <button class="button" id="button1" onclick="cpt1()">En savoir plus</button>
-                <button class="button" id="close-menu1" onclick="close1()">Réduire</button>
-            </div>
-
+    <section class="home">
+        <article data-score="-10" class="parallax">
+            <h3>Bienvenue sur mon <span class="span">Portfolio</span></h3>
+            <p>Je m'appelle Émilien, j'ai 20 ans et je suis étudiant en Licence Profesionnelle MN DDIM (Métiers du
+                Numérique : Design et Développement de l'Internet Mobile). <br>
+                Sur mon portfolio vous pourrez découvrir tous
+                les travaux que j'ai pu réaliser dans le cadre de mes études ou encore sur mon temps personnel, comme
+                pour la 3D.
+                <br><br>
+                Je vous laisse découvrir un condensé de mes créations, bonne visite !
+            </p>
         </article>
-        <article id="case2" class="case2">
-            <div class="contenu">
-                <h2>Graphismes</h2>
-                <p>
-                    Le graphisme est un domaine que j'ai développé tout au long de ma formation à l'I.U.T MMI de
-                    Dijon.
-                </p>
-                <div class="exemple2" id="exempledeux">
-                    <div id="ex-content2">
-                        <h3>Dans cette catégories vous pourrez retrouver :</h3>
-                        <br>
-                        • Des identitées visuelles,
-                        <br>
-                        • Des maquettes,
-                        <br>
-                        • Des charte graphiques.
-                        <br>
-                    </div>
-                    <img src="medias/images/illustrator/Carte de visite Mock up.png" alt="">
-                </div>
-            </div>
-
-            <div class="buttons">
-                <a href="#graphismes" class="button" id="all2">Tout voir</a>
-                <button class="button" id="button2" onclick="cpt2()">En savoir plus</button>
-                <button class="button" id="close-menu2" onclick="close2()">Réduire</button>
-            </div>
-
-        </article>
-        <article id="case3" class="case3">
-            <div class="contenu">
-                <h2>À propos</h2>
-                <p>
-                    Vous voulez en apprendre plus sur moi et mon travail ? C'est ici que ça se passe !
-                </p>
-            </div>
-
-            <div class="buttons">
-                <a href="#propos" class="button" id="button3" onclick="cpt3()">En savoir plus</a>
-            </div>
-
-        </article>
+        <h3 class="parallax" data-score="14">Web developper</h3>
+        <img data-score="18" class="parallax scale" src="medias/photo-de-profil.png" alt="">
     </section>
 
-    <a href="#proj3d" id="go">↷</a>
+    <a href="#scroll-bottom" class="go-bottom"><i class="fas fa-arrow-circle-down"></i> Découvrir</a>
+
+    <div id="scroll-bottom"></div>
 
 
-    <section class="proj3d" id="proj3d">
+    <section class="webdesign" id="webdesign">
+        <h3 class="bold about-title"><i class="fas fa-code"></i> Webdesign / Dev</h3>
 
-        <div class="grille1">
-            <article id="dvisu" class="card1">
-                <h1>Scene Japonisante</h1>
-                <img src="medias/mockup/japan-scene-transparent.png" alt="">
-            </article>
-            <article id="dvisu2" class="card2">
-                <h1>DeLorean, Plutonium station</h1>
-                <img src="medias/mockup/b2f-transparent.png" alt="">
-            </article>
-            <article id="dvisu3" class="card3">
-                <h1>Échantillon</h1>
-                <img src="medias/mockup/echantillon-transparent.png" alt="">
-            </article>
-        </div>
-        <div class="grille0 anim1">
-            <h2>Voici mes <span>projets 3D.</span></h2>
-            <p>De la modélisation à l'animation, mes projets 3D sont réalisés sous Blender. C'est ici que vous
-                découvrirez le résultat de ma formation en autodidacte en 3D. </p>
-        </div>
-        <div class="grille2">
-            <article id="dvisu4">
-                <h1>Demon Slayer</h1>
-            </article>
-            <article id="dvisu5">
-                <h1>Hellaphant 1000</h1>
-            </article>
-        </div>
-    </section>
+        <p class="description">Les projets ci-dessous ont été réalisé dans le cadre de mes études en Licence Pro. Pour
+            la plupart, les livrables étaient attendues rapidement, avec des délais bien trop court pour ce type de
+            projets, comparé au délais demandés en entreprise...</p>
 
+        <div class="study-room">
 
-    <section class="graphismes" id="graphismes">
-        <article id="graph1">
-            <div class="graph-content anim1">
-                <h2>Il y aussi du <span>graphismes.</span></h2>
-                <p>La formation que j'ai suivie durant mes 2 premières années d'études m'a permis d'acquérir et de
-                    développer certaines de mes compétences. <br>
-                    Les travaux présentés ci-dessous ont, pour la plupart, été réaliser pour des projets universitaires.
-                    Les autres sont des créations personnelles que je souhaite mettre en avant.
-                </p>
+            <div class="moodboard">
+                <h4 class="bold">• My Study Room</h4>
+                <p>Le principe est simple créer l'interface d'une application de recherche de collocation.
+                    Mon groupe et moi, étions chargés de crééer la page de recherche. Notre premiere étape a donc été de
+                    réaliser le moodboard afin de choisir les couleurs et les typographie dans l'esprit de la
+                    collocation.</p>
+                <img class="" src="medias/webdesign/moodboard-MyStduyRoom.png" alt="">
             </div>
-        </article>
+            <div class="maquette">
+                <img src="medias/webdesign/maquette-MyStudyRoom.png" alt="">
+            </div>
 
-        <article id="graph2">
-            <div class="graph-case1">
-                <div>
-                    <h1 class="anim1">Origami</h1>
+        </div>
+
+        <div class="waterplace">
+
+            <div class="pc">
+                <h4 class="bold">• WaterPlace</h4>
+                <p>Un complexe aquatique fictif, souhaitant s'implanter dans Dijon nous à contacté dans le cadre de
+                    notre Licence Pro. <br>
+                    Le but : Concevoir un site web permettant de promouvoir le complexe ainsi qu'un plan de
+                    communication complet (Vidéo, réseaux sociaux, affiches, etc).
                     <br>
-                    <p class="anim1">Entreprise fictive, matériel d'art.</p>
+                    Le tout, en 12h...
+                </p>
+                <a target=”_blank” href="https://water-place.github.io/WaterPlace/index.html#top"><i
+                        class="fas fa-external-link-alt"></i> Accédez au site web</a>
+                <img class="" src="medias/webdesign/waterplace-about.png" alt="">
+            </div>
+
+            <div class="phone">
+                <img src="medias/webdesign//waterplace-home-phone.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="graphisme" id="section-graphisme">
+        <h3 class="bold about-title"><i class="fas fa-pen-nib"></i> Graphisme</h3>
+
+        <p class="description">La formation que j'ai suivie durant mes 2 premières années d'études m'a permis d'acquérir
+            et de développer certaines de mes compétences, que j'ai continué à développer durant mon année en Licence
+            Pro.
+
+            Les travaux présentés ci-dessous ont, pour la plupart, été réaliser pour des projets universitaires. Les
+            autres sont des créations personnelles que je souhaite mettre en avant.
+        </p>
+
+        <div class="waterplace-graph">
+            <div class="waterplace-container">
+                <h4 class="bold">• WaterPlace</h4>
+                <p>Avant même de commencer le projet présenter précédemment, WaterPlace avait besoin d'une refonte
+                    graphique. Pour cela nous avons réalisé, avec mon groupe, une identité à connotation familiale,
+                    amicale, dans le but d'attirer les familles et groupes d'amis.</p>
+                <a target=”_blank” href="medias/graphisme/waterplace/WaterPlace-charte-graphique-minimaliste.pdf"><i
+                        class="fas fa-external-link-alt"></i> Voir la charte graphique</a>
+                <img class="" src="medias/graphisme/waterplace/WaterPlace-logotype.png" alt="">
+            </div>
+
+            <div class="waterplace-images">
+                <img class="" src="medias/graphisme/waterplace/iphone12.png" alt="">
+            </div>
+        </div>
+        <div class="origami">
+            <div class="origami-container">
+                <h4 class="bold">• Origami</h4>
+                <p>Origami est une boutique d'Art fictive. De base spécialisé dans les supports, plus particulièrement
+                    le papier, Origami à souhaité étendre sa gamme de produit à l'instar des grandes enseignes d'Art.
+                    <br>
+                    L'objectif: Créer leur identité visuelle tout en gardant une référence à l'origine de l'entreprise
+                </p>
+                <a target=”_blank” href="medias/graphisme/origami/charte_graphique-Origami.pdf"><i
+                        class="fas fa-external-link-alt"></i> Voir la charte graphique</a>
+            </div>
+
+            <div class="origami-images">
+                <img class="" src="medias/graphisme/origami/origami.png" alt="">
+                <img class="" src="medias/graphisme/origami/Carte de visite Mock up.png" alt="">
+            </div>
+        </div>
+        <div class="duquoc">
+            <div class="duquoc-content">
+                <img src="medias/graphisme/duquoc/info_duquoc.png" alt="">
+
+                <div class="duquoc-p">
+                    <h4 class="bold">• Montage à la manière de Duquoc</h4>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse et, maxime id voluptatibus quia nobis
+                    veniam vero, blanditiis dignissimos quidem commodi similique? Beatae error quibusdam fuga recusandae
+                    hic tempora. Soluta.
                 </div>
-                <img src="medias/images/illustrator/Carte de visite Mock up.png" alt="">
             </div>
-
-            <div class="graph-case2">
-            </div>
-        </article>
-
-        <article id="graph3">
-            <div id="graph-case2-5">
-
-            </div>
-            <div id="graph-case4" class="anim1">
-
-            </div>
-            <div id="graph-case3" class="card3">
-                <h1>Maquette <span>"The Queen's Gambit"</span></h1>
-                <p> Simplement une petite maquette de ce que je rêve de voir pour les séries/films Netflix.
+        </div>
+        <div class="vrac">
+            <h4 class="bold">• Autres créations</h4>
+            <div class="vrac-container">
+                <img src="medias/graphisme/vrac/Sans titre - 3.jpg" alt="">
+                <p> Voici deux créations réalisées sur mon temps personnel :
+                    <br>
+                    Une créations typographique "Pac-Man" et simplement une petite maquette de ce que je rêve de voir
+                    pour les séries/films Netflix.
                 </p>
+                <img src="medias/graphisme/vrac/tqg_.png" alt="">
             </div>
-
-        </article>
-        <article id="graph4">
-            <div id="graph-case5" class="anim1">
-                <h1>L'art avec un <span>petit a.</span></h1>
-                <p> Montage Photoshop à la manière de DuQuoq.
-                </p>
-            </div>
-            <div id="graph-case6">
-
-            </div>
-        </article>
+        </div>
     </section>
 
-    <section class="audiovisuels" id="audiov">
-        <article class="audio1">
-            <div class="audio-content1">
+    <section class="troisd" id="section-trois">
+        <h3 class="bold about-title"><i class="fas fa-cube"></i> Projets 3D</h3>
 
-            </div>
-            <div class="audio-content2 anim1">
-                <h2>Je réalise aussi des<br> <span>Animations</span>
-                    et du contenu <span>Audiovisuel</span> <br> à partir des projets <br> vus précédemment.</h2>
-            </div>
-        </article>
-
-        <article class="audio2">
-            <iframe class="card1" src="https://www.youtube.com/embed/cq4LUj43xeI" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-
-            <iframe class="card2" src="https://www.youtube.com/embed/0Kn5nwjAxXY" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-
-            <iframe class="card3" src="https://www.youtube.com/embed/1mthcp8Z8lA" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </article>
+        <div class="trois-container">
+            <div class="img backgrnd3 "><img class="scale" src="medias/3d/animdl.gif" alt=""></div>
+            <article>
+                <p>De la modélisation à l'animation, mes projets 3D sont réalisés sous Blender. C'est ici que vous
+                    découvrirez le résultat de ma formation en autodidacte. </p>
+            </article>
+            <div class="img backgrnd1 "><img class="scale" src="medias/3d/japan-scene-transparent.png" alt=""></div>
+        </div>
+        <div class="trois-container">
+            <div class="img backgrnd4 "><img class="scale" src="medias/3d/echantillon-transparent.png" alt=""></div>
+            <div class="img backgrnd2 "><img class="scale" src="medias/3d/delorean-transparent.jpg" alt=""></div>
+            <div class="img backgrnd4 "><img class="scale" src="medias/3d/DS_render1.jpg" alt=""></div>
+        </div>
+        <div class="trois-container">
+            <div class="img backgrnd4"><img class="scale" src="medias/3d/labo_scene1.jpg" alt=""></div>
+            <div class="img backgrnd2 "><img class="scale" src="medias/3d/super_charger_insta.png" alt=""></div>
+            <div class="img backgrnd2 "><img class="scale" src="medias/3d/rendu_instagram.png" alt=""></div>
+        </div>
     </section>
 
-    <section class="propos" id="propos">
-        <article class="pp1">
-            <div class="pp-content2 card2">
-                <span>Émilien COULAND,</span> 19 ans, futur diplômé d'un DUT M.M.I, Métiers du Multimédia et de
-                l'Internet. En
-                attente des
-                résultats pour mon diplôme, dans l'espoir de continuer ma formation en <span>Licence Pro Métiers du
-                    Numérique,
-                    Design et Développement pour l’Internet Mobile.</span>
-                Je souhaite développer mes connaissances et mes compétences dans les différents domaines suivants :
+    <section class="about" id="section-about">
+        <h3 class="bold about-title"><i class="fas fa-address-card"></i> À propos</h3>
+
+        <h4 class="italic"><i class="fas fa-arrow-circle-right"></i> Comment me suis-je <span class="bold">formé</span>
+            ?</h4>
+        <div class="formation-container">
+            <article class="formation">
+                <div class="content-form">
+                    <div class="puce"><i class="fas fa-graduation-cap"></i> 2021-2022</div>
+
+                    <p class="bold">Licence professionnelle – <span class="italic">Développement et
+                            Design de l’Internet Mobile (DDIM)</span></p>
+                </div>
+            </article>
+            <i class="fas fa-arrow-right"></i>
+            <article class="formation">
+                <div class="content-form">
+                    <div class="puce"><i class="fas fa-graduation-cap"></i> 2019 - 2021</div>
+
+                    <p class="bold">DUT – <span class="italic">Métiers du Multimédia et de l’Internet
+                            (MMI) avec mention</span></p>
+                </div>
+            </article>
+            <i class="fas fa-arrow-right"></i>
+            <article class="formation">
+                <div class="content-form">
+                    <div class="puce"><i class="fas fa-graduation-cap"></i> 2017-2019</div>
+
+                    <p class="bold">Baccalauréat – <span class="italic">Sciences et Technologies de
+                            l’Industrie et du Développement Durables (STI2D) avec
+                            mention</span></p>
+                </div>
+            </article>
+        </div>
+
+        <h4 class="italic"><i class="fas fa-arrow-circle-right"></i> Et mon <span class="bold">expérience </span>, ça
+            donne quoi ?</h4>
+        <article class="module">
+            <div class="time">
+                <p class="bold">Développeur web <i class="fas fa-code"></i></p>
+                <p class="italic">AnthroPi (Organisme de formation et de création de logiciel)</p>
+                <p class="italic">Septembre 2021 – Septembre 2022 à Dijon</p>
+            </div>
+            <p>
+                - Déplacements en Bretagne et dans les Alpes de Haute-Provence,
+                mise en place du matériel informatique, soutien technique et gestion
+                de crise avec l’équipe sur place (panne nationale OVH, mauvaise
+                couverture réseaux).
                 <br>
-                <span>
-                    <br>
-                    • La modélisation & l'animation 3D,
-                    <br>
-                    • Le développement Full-Stack,
-                    <br>
-                    • La maîtrise d'Angular,
-                    <br>
-                    • UX & UI Design,
-                    <br>
-                </span>
+                - Développement d’un Escape Game 3D à partir de modélisation 3D.
                 <br>
-                Et si possible continuer à développer ma créativité à travers mes dessins et mes vectorisations sous
-                Illustrator.
-            </div>
-
-            <div class="pp-content1 card1">
-                <h2>À <span>Propos</span></h2>
-            </div>
-
+                - Élaborations de maquettes pour les applicatifs de l'entreprise.
+            </p>
         </article>
-        <article class="pp2">
-            <div>
-                <h2>Mon <span>e-mail</span> et mon <span>CV.</span></h2>
-                <p class="anim1">• emiliencloud@gmail.com •</p>
-                <a class="cv anim1" href="../medias/pdf/cv_emilien_couland.pdf" download="CV_EmilienCOULAND">Mon CV</a>
-            </div>
 
-            <div class="reseaux">
-                <h2>Vous pouvez me retrouver <br> sur les différents <span>réseaux</span> suivants :</h2>
-                <div class="icon">
-                    <a href="https://www.instagram.com/emiliencloud/" class="card1"><img src="medias/logos/insta.png" alt=""></a>
-                    <a href="https://www.youtube.com/channel/UCznaktk1gSc5PCoilMUpybg" class="card2"><img src="medias/logos/ytb.png" alt=""></a>
-                    <a href="https://www.linkedin.com/in/emilien-couland-46b6a01b6/" class="card3"><img src="medias/logos/linkedin.png" alt=""></a>
-                </div>
-
+        <article class="module">
+            <div class="time">
+                <p class="bold">Développeur junior <i class="fas fa-code"></i></p>
+                <p class="italic">AnthroPi (Organisme de formation et de création de logiciel)</p>
+                <p class="italic">Juin 2021 – Septembre 2021 à Dijon</p>
             </div>
+            <p>
+                - Participation aux « Journées Simulphone » au Palais des Congrès de
+                Beaune, gestion et mise en place de la rediffusion en direct de
+                l’évènement.
+                <br>
+                - Déplacements en Bretagne et au Luxembourg, mise en place du
+                matériels informatiques, soutien technique.
+                <br>
+                - Enregistrements et découpages audios sous Pro tools.
+                <br>
+                - Développement du prototype de l’Escape Game, Maquettage des
+                futurs applicatifs de l’entreprise.
+            </p>
+        </article>
+
+        <article class="module">
+            <div class="time">
+                <p class="bold">Assistant de production <i class="fas fa-photo-video"></i></p>
+                <p class="italic">AnthroPi (Organisme de formation et de création de logiciel)</p>
+                <p class="italic">Avril 2021 – Juin 2021 à Dijon</p>
+            </div>
+            <p>
+                - Création d’environnements 3D pour un Escape Game web.
+                <br>
+                - Création et montage de vidéos promotionnelles des applicatifs de
+                l’entreprise.
+                <br>
+                - Enregistrements découpages audios sous Ardour.
+                <br>
+                - Déplacements en région Parisienne, mise en place du matériel
+                informatique pour la formation. Gestion des problèmes rencontrés
+                sur place.
+            </p>
+        </article>
+
+        <article class="reseaux">
+            <a target="_blank" href="medias/cv_emilien_couland.pdf"><i class="fas fa-file-pdf"></i> CV en PDF</a>
+            <a target="_blank" href="https://www.linkedin.com/in/emilien-couland-46b6a01b6/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a target="_blank" href="https://www.instagram.com/emiliencloud/"><i class="fab fa-instagram"></i> Instagram</a>
         </article>
     </section>
 
     <footer>
         <p>© 2021 - Emilien COULAND</p>
+        <a target="_blank" href="medias/" class="mentions"><i class="fas fa-external-link-alt"></i> Mentions légales</a>
         <p>emiliencloud@gmail.com</p>
     </footer>
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="script/anim.js"></script>
 </body>
 
 </html>
