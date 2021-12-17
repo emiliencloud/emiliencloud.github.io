@@ -371,8 +371,8 @@
 
      nav>a {
 
-        margin: 1.5em;
-        font-size: 1.5em;
+        margin: 1em;
+        font-size: 1.25em;
         text-align: center;
          text-decoration: none;
          color: var(--main-color);
